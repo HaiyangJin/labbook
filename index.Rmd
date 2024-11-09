@@ -7,9 +7,6 @@ bibliography: [references.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 colorlinks: yes
-lot: yes
-lof: yes
-geometry: [b5paper, tmargin=2.5cm, bmargin=2.5cm, lmargin=3.5cm, rmargin=2.5cm]
 site: bookdown::bookdown_site
 description: "This is the lab book of Face Lab."
 github-repo: haiyangjin/lab-book

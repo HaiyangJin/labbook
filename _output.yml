@@ -6,7 +6,7 @@ bookdown::gitbook:
         <li><a href="./">Face Lab Book</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/haiyangjin/facelabbook/edit/main/%s
+    edit: https://github.com/HaiyangJin/lab-book/edit/main/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:

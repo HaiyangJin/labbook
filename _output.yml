@@ -1,18 +1,30 @@
 bookdown::gitbook:
-  css: style.css
+  css: css/style.css
+  pandoc_args: ["--lua-filter=css/color-text.lua"]
   config:
     toc:
       before: |
         <li><a href="./">Face Lab Book</a></li>
       after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+        <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
     edit: https://github.com/HaiyangJin/lab-book/edit/main/%s
     download: ["pdf", "epub"]
+    sharing:
+      github: yes
+      facebook: no
 bookdown::pdf_book:
   includes:
-    in_header: preamble.tex
+    in_header: latex/preamble.tex
+    before_body: latex/before_body.tex
+    after_body: latex/after_body.tex
+  keep_tex: yes
+  dev: "cairo_pdf"
   latex_engine: xelatex
   citation_package: natbib
-  keep_tex: yes
+  template: latex/template.tex
+  pandoc_args: ["--top-level-division=chapter", "--lua-filter=css/color-text.lua"]
+  toc_depth: 3
+  toc_unnumbered: no
+  toc_appendix: yes
+  quote_footer: ["\\begin{flushright}", "\\end{flushright}"]
 bookdown::epub_book: default
-bookdown::bs4_book: default

@@ -1,5 +1,12 @@
-book_filename: "face_lab_book"
+book_filename: "lab_book"
+clean: [packages.bib, bookdown.bbl]
+rmd_files: "index.Rmd"
+rmd_subdir: ["rmd_stats", "rmd_tools", "rmd_stimdata", "rmd_appendices"]
 language:
+  label:
+    fig: "图 "
+    tab: "表 "
   ui:
-    chapter_name: "Chapter "
+    edit: "编辑"
+    chapter_name: ["第 ", " 章"]
 delete_merged_file: true

@@ -2,6 +2,10 @@
 .Rproj.user
 .Rhistory
 .RData
+.Ruserdata
 _book
-_bookdown_files
 rsconnect
+lab_book_files
+
+docs/lab_book.pdf
+docs/lab_book.epub

@@ -1,3 +1,8 @@
+fig:contri-mini-dir
+fig:contri-mini-rproj
+fig:contri-mini-build
+fig:contri-new-rmd-1
+fig:contri-new-rmd-2
 简介
 jamovi
 方差分析
@@ -16,3 +21,12 @@ opendata
 脑电eeg
 行为
 如何为本手册作出贡献
+直接pull-request
+简易教程
+下载示例
+安装r和rstudio
+打开labbook.rproj
+确认示例可以运行
+创建一个新的rmd文件
+重新build-book
+其他

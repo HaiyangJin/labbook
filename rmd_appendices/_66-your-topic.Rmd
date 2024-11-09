@@ -1,0 +1,35 @@
+
+# 我的主题
+
+汇总：最棒的我     
+更新于：很开心的今天（或者2024年11月11日）
+
+就是想分享一下今天的快乐。。。
+
+## 加一个二级标题
+
+### 需要放一张照片
+
+- 添加图片方式一：
+```{r test-my-topic, echo=FALSE, fig.cap='我的图片', out.width='60%', fig.align='center'}
+knitr::include_graphics(file.path("img", "jamovi", "anova.png"))
+```
+
+- 添加图片方式二：
+![](img/jamovi/modules-library.png)
+
+### 再给文字加一些颜料
+
+随随便便放一些文字，看看效果如何。
+
+我还想再给某一些文字加个链接，比如[这里](https://www.jamovi.org/)。或者再加一些特定的颜色，比如[红色]{color="red"}和[蓝色]{color="green"}, [对的，]{color="#5bc0eb"}[我就是]{color="#fa7921"}[想弄个]{color="#9bc53d"}[Stroop效应]{color="#e55934"}（抱歉，颜色有点丑）。
+
+### 再来一个列表
+
+- 一个
+- 两个
+- 三个
+
+1. 第一个
+2. 第二个
+3. 第三个

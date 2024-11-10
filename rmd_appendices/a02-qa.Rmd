@@ -1,0 +1,47 @@
+
+# 常见问题 {#qa}
+
+## R和RStudio相关问题
+
+有关R和RStudio的相关问题请查看[这里](https://haiyangjin.github.io/rpsych-cn/qacn.html#qacn)。
+
+## 格式调整
+
+### 文字
+
+#### 文字颜色
+
+你可以通过以下代码设置文字的颜色：
+```markdown
+[红色]{color="red"}   
+[蓝色]{color="green"}  
+[绿色]{color="blue"}  
+[黄色]{color="yellow"}
+```
+
+相应的显示为：   
+[红色]{color="red"}   
+[蓝色]{color="green"}  
+[绿色]{color="blue"}  
+[黄色]{color="yellow"}
+
+### 图片
+
+强烈建议使用以下格式显示图片，这样可以灵活的设置图片的大小和位置等。
+
+````markdown
+`r ''````{r test-my-topic, echo=FALSE, fig.cap='我的图片', out.width='60%', fig.align='center'}
+knitr::include_graphics(file.path("img", "jamovi", "anova.png"))
+```
+````
+    
+```{r qa-img-run, echo=FALSE, fig.cap='这是描述图片的题目', out.width='70%', fig.align='center'}
+knitr::include_graphics(file.path("img", "contribute", "mini_dir.png"))
+```
+
+- `qa-img`：图片的名称，可以自定义（但请不能在同一个文档中重复）。该名称也可以通过 `\@ref(fig:qa-img)` 引用该图片，如`\@ref(fig:qa-img)`。
+- `echo=TRUE`：是否显示该 R chunk 代码。一般情况下应设为 `FALSE`。这里为了展示代码，所以设为 `TRUE`。
+- `fig.cap='这是描述图片的题目'`：图片的题目。
+- `out.width='70%'`：图片的宽度，可以设置为百分比或者像素。
+- `fig.align='center'`：图片的位置，可以设置为 `center`、`left` 或者 `right`。
+

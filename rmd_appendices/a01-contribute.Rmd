@@ -2,21 +2,21 @@
 
 # (APPENDIX) 附录 {-}
 
-# 如何为本手册作出贡献
+# 如何为本手册作出贡献 {#contribute}
 
-    如果你发现这个手册对你有帮助，欢迎你也贡献一份力量。如果你觉得这个手册没有什么用处，同样欢迎你提出建议，和我们一起来完善它。
+如果你发现这个手册对你有帮助，欢迎你也贡献一份力量。如果你觉得这个手册没有什么用处，同样欢迎你提出建议，和我们一起来完善它。
 
 ## 直接Pull Request
 
-    如果你已经可以非常熟练地使用 Git 和 GitHub，那么你可以直接在 GitHub 上提交issues或Pull Request。
+如果你已经可以非常熟练地使用 Git 和 GitHub，那么你可以直接在 GitHub 上提交issues或Pull Request。
 
 ## 简易教程
 
-    如果你对 Git 和 GitHub 不太熟悉，也请不到担心，你仍然可以通过本教程，学习如何完成一个可以成为本手册一部分的Rmd文件。完成后你只需将新创建的Rmd文档发送给我们，审核通过后该文档内容就会出现在[本实验室手册](https://haiyangjin.github.io/labbook/)。
+如果你对 Git 和 GitHub 不太熟悉，也请不到担心，你仍然可以通过本教程，学习如何完成一个可以成为本手册一部分的Rmd文件。完成后你只需将新创建的Rmd文档发送给我们，审核通过后该文档内容就会出现在[本实验室手册](https://haiyangjin.github.io/labbook/)。
 
 ### 下载示例
 
-    首先请下载[示例](https://github.com/HaiyangJin/labbook/archive/refs/heads/mini.zip)。解压后你会看到一个名为`labbook-mini`的文件夹。
+首先请下载[示例](https://github.com/HaiyangJin/labbook/archive/refs/heads/mini.zip)。解压后你会看到一个名为`labbook-mini`的文件夹。
 
 ```{r contri-mini-dir, echo=FALSE, fig.align='center', fig.cap='The minimal example directory', out.width='70%'}
 knitr::include_graphics(file.path("img", "contribute", "mini_dir.png"))
@@ -25,25 +25,25 @@ knitr::include_graphics(file.path("img", "contribute", "mini_dir.png"))
 
 ### 安装R和RStudio
 
-    如果你还没有安装R和RStudio，请先根据[这里的信息](https://haiyangjin.github.io/rpsych-cn/intro.html#prepare)安装相关软件以及进行相应的设置。
+如果你还没有安装R和RStudio，请先根据[这里的信息](https://haiyangjin.github.io/rpsych-cn/intro.html#prepare)安装相关软件以及进行相应的设置。
 
-    安装完成后，请不要忘了[设置R包的镜像源](https://haiyangjin.github.io/rpsych-cn/intro.html#mirror)。
+安装完成后，请不要忘了[设置R包的镜像源](https://haiyangjin.github.io/rpsych-cn/intro.html#mirror)。
 
-    完成后请安装bookdown包，可以在RStudio中运行以下代码来实现：
+完成后请安装bookdown包，可以在RStudio中运行以下代码来实现：
 ```{r contri-install-bookdown, eval=FALSE, include=TRUE}
 install.packages("bookdown")
 ```
 
-    如果遇到问题，可以尝试查看这里的[帮助信息](https://haiyangjin.github.io/rpsych-cn/qacn.html#qacn)。  
+如果遇到问题，可以尝试查看这里的[帮助信息](https://haiyangjin.github.io/rpsych-cn/qacn.html#qacn)。  
 
 ### 打开labbook.Rproj
 
-    请**直接**双击`labbook-mini`文件夹中的`labbook.Rproj`文件，这样你就可以在RStudio中打开这个项目。 
+请**直接**双击`labbook-mini`文件夹中的`labbook.Rproj`文件，这样你就可以在RStudio中打开这个项目。 
 
-    >请**直接**双击`labbook-mini`文件夹中的`labbook.Rproj`文件，这样你就可以在RStudio中打开这个项目。 
+>请**直接**双击`labbook-mini`文件夹中的`labbook.Rproj`文件，这样你就可以在RStudio中打开这个项目。 
 
 ::: {.theorem}
-    请**直接**双击`labbook-mini`文件夹中的`labbook.Rproj`文件，这样你就可以在RStudio中打开这个项目。
+请**直接**双击`labbook-mini`文件夹中的`labbook.Rproj`文件，这样你就可以在RStudio中打开这个项目。
 :::
   
 打开后你会看到如下的界面：
@@ -55,17 +55,17 @@ knitr::include_graphics(file.path("img", "contribute", "mini_rproj.png"))
 
 ### 确认示例可以运行
 
-    现在我们可以尝试运行这个示例了。请在RStudio右上角找到`Build`，然后点击`Build Book`。如果一切顺利，会跳出一个窗口，同时你应该会在RStudio的右上角看到：
+现在我们可以尝试运行这个示例了。请在RStudio右上角找到`Build`，然后点击`Build Book`。如果一切顺利，会跳出一个窗口，同时你应该会在RStudio的右上角看到：
 ```{r contri-mini-build, echo=FALSE, fig.cap='Build book for the minimal example', out.width='70%', fig.align='center'}
 knitr::include_graphics(file.path("img", "contribute", "mini_build.png"))
 ```
 
 
-    如果你不小心关掉了跳出的窗口，你应该会看到在`labbook-mini`文件夹中生成了一个`_book`子文件夹，里面包含了一个`index.html`文件。请双击这个文件通过浏览器打开，你会看到一个网页版的示例。
+如果你不小心关掉了跳出的窗口，你应该会看到在`labbook-mini`文件夹中生成了一个`_book`子文件夹，里面包含了一个`index.html`文件。请双击这个文件通过浏览器打开，你会看到一个网页版的示例。
 
 ### 创建一个新的Rmd文件
 
-    现在我们可以开始创建一个新的Rmd文件来介绍你想贡献的内容了。比如你可以打开`20-new.Rmd`文件，然后将其另存为`66-your_topic.Rmd`。请确保你的文件名中包含了你的主题，这样我们可以更容易地了解不同`Rmd`文件的内容。
+现在我们可以开始创建一个新的Rmd文件来介绍你想贡献的内容了。比如你可以打开`20-new.Rmd`文件，然后将其另存为`66-your_topic.Rmd`。请确保你的文件名中包含了你的主题，这样我们可以更容易地了解不同`Rmd`文件的内容。
 
 例如，你可以输入这些内容：
 ````markdown
@@ -91,9 +91,12 @@ knitr::include_graphics(file.path("img", "jamovi", "anova.png"))
 
 ## 再给文字加一些颜料
 
-    随随便便放一些文字，看看效果如何。
+随随便便放一些文字，看看效果如何。
 
-    我还想再给某一些文字加个链接，比如[这里](https://www.jamovi.org/)。或者再加一些特定的颜色，比如[红色]{color="red"}和[蓝色]{color="green"}, [对的，]{color="#5bc0eb"}[我就是]{color="#fa7921"}[想弄个]{color="#9bc53d"}[Stroop效应]{color="#e55934"}（抱歉，颜色有点丑）。
+我还想再给某一些文字加个链接，比如[这里](https://www.jamovi.org/)。
+或者再加一些特定的颜色，比如[红色]{color="red"}和[蓝色]{color="green"},
+[对的，]{color="#5bc0eb"}[我就是]{color="#fa7921"}[想弄个]{color="#9bc53d"}
+[Stroop效应]{color="#e55934"}（抱歉，颜色有点丑）。
 
 ### 再来一个列表
 
@@ -109,7 +112,7 @@ knitr::include_graphics(file.path("img", "jamovi", "anova.png"))
 
 ### 重新Build book 
 
-    输入一些Rmarkdown内容后，请通过RStudio右上角的`Build`，再一次`Build Book`及时检查是否可以成功生成网页文件。[如果你已经输入了上述所有代码，那你应该会看到]{color="red"}：
+输入一些Rmarkdown内容后，请通过RStudio右上角的`Build`，再一次`Build Book`及时检查是否可以成功生成网页文件。[如果你已经输入了上述所有代码，那你应该会看到]{color="red"}：
 
 ```{r contri-new-rmd, echo=FALSE, fig.cap='The new Rmd file output', out.width='80%', fig.align='center'}
 knitr::include_graphics(file.path("img", "contribute", "new_rmd_output1.png"))
@@ -119,8 +122,9 @@ knitr::include_graphics(file.path("img", "contribute", "new_rmd_output2.png"))
 
 ### 其他
 
-    如果你想再了解其他关于Rmarkdown/markdown的一些“特殊”用法，可以看看[这里](https://bookdown.org/yihui/bookdown/markdown-syntax.html#block-level-elements)。
+如果你想再了解其他关于Rmarkdown/markdown的一些“特殊”用法，可以看看[这里](https://bookdown.org/yihui/bookdown/markdown-syntax.html#block-level-elements)。
 
-    就先这样吧。如果你有任何问题，欢迎随时联系[我们](https://haiyangjin.github.io/en/contact/)。
+就先这样吧。如果你有任何问题，欢迎随时联系[我们](https://haiyangjin.github.io/en/contact/)。
 
-    期待着你的Rmd会出现在手册里！
+期待着你的Rmd会出现在手册里！
+  

@@ -78,15 +78,6 @@
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
-\usepackage{graphicx,grffile}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 \IfFileExists{parskip.sty}{%
 \usepackage{parskip}
 }{% else
@@ -172,7 +163,7 @@
 
 \title{Face lab book}
 \author{Face lab}
-\date{2024-11-10}
+\date{2024-11-16}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -236,64 +227,157 @@
 
 \section{方差分析}\label{ux65b9ux5deeux5206ux6790}
 
-导入数据后，依次点击``分析''\,``方差分析''选项，然后在弹出的选项栏中选择适当的方差分析方法。前五个为参数检验方法，后两个为非参数检验方法，它们分别对应统计课本中的克-瓦氏单向方差分析和弗里德曼两因素等级方差分析。
+\subsection{重复测量方差分析}\label{ux91cdux590dux6d4bux91cfux65b9ux5deeux5206ux6790}
 
-\includegraphics{img/jamovi/anova.png}
+1.导入数据后，依次点击``分析''\,``方差分析''选项，然后在弹出的选项栏中选择适当的方差分析方法。前五个为参数检验方法，后两个为非参数检验方法，它们分别对应统计课本中的克-瓦氏单向方差分析和弗里德曼两因素等级方差分析。
 
-此次以重复测量方差分析为例。在下图左侧的界面里，左侧是我们数据的名称，右侧的``重复测量因子''是指在研究中设置的``被试内自变量''。在本例中，我们有三个``被试内自变量''，每个自变量都有两个水平。例如我们将``重复测量因子1''定义为Familiar，它包括``familiar''和``unfamiliar''两个水平。
+\begin{figure}
 
-\includegraphics{img/jamovi/rmanova-factor.png}\\
-\includegraphics{img/jamovi/rmanova-factorlevels.png}
+{\centering \includegraphics[width=0.8\linewidth]{img/jamovi/anova} 
 
-定义好重复测量因子后，``重复测量单元''中会出现各个自变量水平的组合，而``重复测量单元''也就是指研究中的各种实验条件。在本例中我们的实验是一个2 * 2 * 2的被试内设计，所以共有8种实验条件，我们需要做的是将数据拖入其对应的重复测量单元中。
+}
 
-\includegraphics{img/jamovi/rmanova-factorlevels2.png}
+\caption{方差分析}\label{fig:jamovi-anova}
+\end{figure}
 
-接下来我们要选择效应量为``偏η²值''，以及确定因变量标签。本例中因变量标签为``d-prime''.
+2.此次以重复测量方差分析为例。在下图左侧的界面里，左侧是我们数据的名称，右侧的``重复测量因子''是指在研究中设置的``被试内自变量''。在本例中，我们有三个``被试内自变量''，每个自变量都有两个水平。
 
-\includegraphics{img/jamovi/rmanova-dv.png}
+\begin{figure}
 
-下面的五个选项里，我们应当关注的主要是``适用条件判断''和``事后检验''。
+{\centering \includegraphics[width=0.6\linewidth]{img/jamovi/rmanova-factor} 
 
-\includegraphics{img/jamovi/rmanova-sphericity.png}
+}
 
-对本专业来说，在这一栏中较为重要的是``方差齐性检验''，如果变量中涉及被试间变量，那么应当进行方差齐性检验。但由于本例中的变量都是被试内变量，所以无需进行方差齐性检验。其他几个选项可以根据研究所需进行选取。
+\caption{自变量}\label{fig:jamovi-rmanova-factor}
+\end{figure}
 
-所有设定完成后，jamovi会在右侧呈现数据分析结果。
+3.例如我们将``重复测量因子1''定义为Familiar，它包括``familiar''和``unfamiliar''两个水平。
 
-\includegraphics{img/jamovi/rmanova-result.png}
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{img/jamovi/rmanova-factorlevels} 
+
+}
+
+\caption{自变量水平}\label{fig:jamovi-rmanova-factorlevels}
+\end{figure}
+
+4.定义好重复测量因子后，``重复测量单元''中会出现各个自变量水平的组合，而``重复测量单元''也就是指研究中的各种实验条件。在本例中我们的实验是一个2 * 2 * 2的被试内设计，所以共有8种实验条件，我们需要做的是将数据拖入其对应的重复测量单元中。
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/jamovi/rmanova-factorlevels2} 
+
+}
+
+\caption{自变量水平2}\label{fig:jamovi-rmanova-factorlevels2}
+\end{figure}
+
+5.接下来我们要选择效应量为``偏η²值''，以及确定因变量标签。本例中因变量标签为``d-prime''.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/jamovi/rmanova-dv} 
+
+}
+
+\caption{效应量偏η²}\label{fig:jamovi-rmanova-dv}
+\end{figure}
+
+6.下面的五个选项里，我们应当关注的主要是``适用条件判断''和``事后检验''。其中``事后检验''在之后的``2.2简单效应分析''一节中介绍。本节中我们先关注``适用条件判断''。
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/jamovi/rmanova-posthoc} 
+
+}
+
+\caption{五个选项}\label{fig:jamovi-rmanova-posthoc1}
+\end{figure}
+
+7.对本专业来说，在``适用条件判断''这一栏中较为重要的是``方差齐性检验''，如果变量中涉及被试间变量，那么应当进行方差齐性检验。但由于本例中的变量都是被试内变量，所以无需进行方差齐性检验。其他几个选项也可以根据研究所需选取。
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/jamovi/rmanova-sphericity} 
+
+}
+
+\caption{适用条件判断}\label{fig:jamovi-rmanova-sphericity}
+\end{figure}
+
+8.所有设定完成后，Jamovi会在右侧呈现数据分析结果。
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/jamovi/rmanova-result} 
+
+}
+
+\caption{方差分析结果}\label{fig:jamovi-rmanova-result}
+\end{figure}
 
 \section{简单效应分析}\label{ux7b80ux5355ux6548ux5e94ux5206ux6790}
 
-这一部分承接上述重复测量方差分析。在本例中，当我们在jamovi中确定好了``重复测量因子''即``被试内变量''和``重复测量单元''即``实验条件''后，我们可以看到右侧的结果栏中就可以呈现统计结果，如果某两个或几个变量之间存在显著的交互作用，那么我们应当进行事后检验，以确定一个变量在与它有交互作用的另一个变量的哪些水平上显著，哪些水平上不显著。我们需要选择下列五个选项中的``事后检验''。
+如果F检验的结果表明差异不显著，说明实验中的自变量对因变量没有显著影响。相反，如果方差分析下检验的结果表明差异显著，拒绝了虚无假设，就表明几个实验处理组的两两比较中至少有一对平均数间的差异达到了显著水平，至于是哪一对，方差分析并没有回答。虚无假设被拒绝的结果一旦出现，就必须对各实验处理组的多对平均数进一步分析做深入比较，判断究竟是哪一对或哪几对的差异显著，哪几对不显著，确定两变量关系的本质，这就是事后检验(post hoc test)。这个统计分析过程也被称作事后多重比较(multiple comparison procedures)。
 
-\includegraphics{img/jamovi/rmanova-posthoc.png}
+\subsection{重复测量方差分析中的简单效应分析}\label{ux91cdux590dux6d4bux91cfux65b9ux5deeux5206ux6790ux4e2dux7684ux7b80ux5355ux6548ux5e94ux5206ux6790}
 
-选择需要进行事后检验的交互变量，并按照需要选择恰当的校正方法。
+这一部分承接上述重复测量方差分析。在本例中，当我们在Jamovi中确定好了``重复测量因子''即``被试内变量''和``重复测量单元''即``实验条件''后，我们可以看到右侧的结果栏中就可以呈现统计结果，如果某两个或几个变量之间存在显著的交互作用，那么我们应当进行事后检验，以确定一个变量在与它有交互作用的另一个变量的哪些水平上显著，哪些水平上不显著。
 
-\includegraphics{img/jamovi/rmanova-posthoc-results.png}
+1.我们需要先选择下列五个选项中的``事后检验''。再选择需要进行事后检验的交互变量，并按照研究需要选择恰当的校正方法。
 
-右侧生成的结果的最右边两列就是jamovi按照我们选择的Tukey法和Bonferron法计算出的统计值。
+\begin{figure}
 
-\section{t检验}\label{tux68c0ux9a8c}
+{\centering \includegraphics[width=0.6\linewidth]{img/jamovi/rmanova-posthoc} 
+
+}
+
+\caption{事后检验}\label{fig:jamovi-rmanova-posthoc2}
+\end{figure}
+
+2.右侧窗口会生成事后检验的结果，其中最右边两列就是Jamovi按照我们选择的``Tukey法''和``Bonferron法''计算出的统计量。
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/jamovi/rmanova-posthoc-results} 
+
+}
+
+\caption{事后检验结果}\label{fig:jamovi-rmanova-posthoc-results}
+\end{figure}
+
+\section{T检验}\label{tux68c0ux9a8c}
 
 \begin{itemize}
 \tightlist
 \item
   首先，导入数据
 \item
-  其次，点击选项栏的分析，选择对应的t检验
+  其次，点击选项栏的分析，选择对应的T检验。
 \end{itemize}
 
-\includegraphics{img/jamovi/ttest.png}
+\begin{figure}
 
-\begin{itemize}
-\tightlist
-\item
-  接着，选择要分析的变量
-\end{itemize}
+{\centering \includegraphics[width=0.5\linewidth]{img/jamovi/ttest} 
 
-\includegraphics{img/jamovi/ttest-compare.png}
+}
+
+\caption{T检验}\label{fig:jamovi-ttest}
+\end{figure}
+
+\subsection{配对样本T检验}\label{ux914dux5bf9ux6837ux672ctux68c0ux9a8c}
+
+本例中介绍``配对样本T检验''。接着，选择要分析的变量
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/jamovi/ttest-compare} 
+
+}
+
+\caption{变量选择}\label{fig:jamovi-ttest-compare}
+\end{figure}
 
 \begin{itemize}
 \tightlist
@@ -301,19 +385,72 @@
   然后，可以按需勾选，描述就是分析数据的均值、标准差、标准误等描述性数据；描述图就是生成图表
 \end{itemize}
 
-\includegraphics{img/jamovi/ttest-results.png}
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{img/jamovi/ttest-results} 
+
+}
+
+\caption{配对样本T检验结果}\label{fig:jamovi-ttest-results}
+\end{figure}
 
 \section{额外模块推荐}\label{ux989dux5916ux6a21ux5757ux63a8ux8350}
 
-\includegraphics{img/jamovi/modules.png}\\
-\includegraphics{img/jamovi/modules-library.png}
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/jamovi/modules} 
+
+}
+
+\caption{添加额外模块}\label{fig:jamovi-modules}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/jamovi/modules-library} 
+
+}
+
+\caption{额外模块库}\label{fig:jamovi-modules-library}
+\end{figure}
 
 可以通过jamovi官网下载自己所需要的库。这是网址：\url{https://www.jamovi.org/library.html}
 
-\includegraphics{img/jamovi/modules1.png}\\
-\includegraphics{img/jamovi/modules2.png}\\
-\includegraphics{img/jamovi/modules3.png}\\
-\includegraphics{img/jamovi/modules4.png}
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/jamovi/modules1} 
+
+}
+
+\caption{额外模块}\label{fig:jamovi-modules1}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/jamovi/modules2} 
+
+}
+
+\caption{额外模块1}\label{fig:jamovi-modules2}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/jamovi/modules3} 
+
+}
+
+\caption{额外模块2}\label{fig:jamovi-modules3}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/jamovi/modules4} 
+
+}
+
+\caption{额外模块3}\label{fig:jamovi-modules4}
+\end{figure}
 
 \chapter{R语言}\label{r}
 

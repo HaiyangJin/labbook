@@ -23,3 +23,4 @@ github-repo: haiyangjin/lab-book
 
 - 第 \@ref(jamovi) 章: Jamovi  
 - 第 \@ref(zotero) 章: Zotero
+- 第 \@ref(vscode) 章: Visual Studio Code

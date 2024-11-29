@@ -1,0 +1,133 @@
+# (PART) 其他工具 {-}
+
+# Visual Studio Code {#vscode}
+
+## 下载安装
+
+请在[Visual Studio Code官网](https://code.visualstudio.com/)下载该软件。
+
+## 制作公开数据的README.md文件 {#mkreadme}
+
+更新于：2024-11-29
+
+1. 在Visual Studio Code中新建一个文本文档：
+
+```{r mkreadme-mknewfile, echo=FALSE, fig.cap='在VS Code中新建一个文本文档', out.width='60%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_mknewfile.png"))
+```
+
+之后，你应该看到类似的新建文件：
+
+```{r mkreadme-newfile, echo=FALSE, fig.cap='VS Code中的新建文本文档', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_newfile.png"))
+```
+
+<br>
+2. 将新建文档保存为`README.md`文件：
+
+```{r mkreadme-saveas1, echo=FALSE, fig.cap='将新建文本文档另存为...', out.width='70%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_saveas1.png"))
+```
+
+在打开的对话框中，请选择保存新建文本文档的位置，并将文件命名为`README.md`：
+```{r mkreadme-saveas2, echo=FALSE, fig.cap='重命名文件为“README.md”并选择文件存储位置', out.width='80%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_saveas2.png"))
+```
+
+<br>
+3. 根据数据文件编辑`README.md`文件
+
+在`README.md`文件中，你可以添加根据数据文件的内容，添加列名称(`Header`)和内容描述(`Description`)：
+
+```markdown
+
+Header | Description
+---|---
+Column1 | Description of Column1
+Column2 | Description of Column2
+
+```
+
+假定我们用有这样一个数据文件：
+```{r mkreadme-datafile, echo=FALSE, fig.cap='数据文件', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_datafile.png"))
+```
+
+我们相应地编辑`README.md`文件：
+
+```markdown
+
+Header | Description
+---|---
+SubjCode | Subject Code
+Trial Number | trial number
+Orientation | orientation of the stimulus: `upr`: upright vs `inv`: inverted
+Congruency | congruency of the trial type in complete composite task: `con`: congruent vs `inc`: incongruent
+Alignment | whether the top and bottom halves of faces are aligned (`ali`) or misaligned (`mis`)
+CorrectAnswer | whether the correct response was the same (`s`) or different (`d`)
+Acc | whether the response was correct (`1`) or incorrect (`0`)
+isSame | whether participant reported the same (`1`) or not (`0`) for that trial
+RT | response time in milliseconds
+
+```
+
+<br>
+4. 编辑`README.md`文件的同时预览效果
+
+在编辑`README.md`文件的同时，你可以通过以下方式来预览效果：
+
+- `Ctrl + Shift + V` (Windows)快捷键
+- `Cmd + Shift + V` (Mac)快捷键
+- 右键点击`README.md`文件，选择`Open Preview`选项
+
+```{r mkreadme-openpreview, echo=FALSE, fig.cap='右键点击`README.md`文件，选择`Open Preview`选项', out.width='60%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_openpreview.png"))
+```
+
+预览效果与下图类似：
+```{r mkreadme-preview, echo=FALSE, fig.cap='预览md文件', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_preview.png"))
+```
+
+<br>
+5. 将`README.md`文件保存为pdf文件
+
+完成编辑`README.md`文件后，我们可以将其保存为或生成一个pdf文档。
+
+  5.1 在VS Code中安装`Markdown PDF`插件
+
+```{r mkreadme-extension, echo=FALSE, fig.cap='VS Code中打开Extension', out.width='40%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_extension.png"))
+```
+
+在搜索框中输入`Markdown PDF`，并点击安装(`Install`)：
+```{r mkreadme-markdownpdf, echo=FALSE, fig.cap='搜索并安装Markdown PDF', out.width='50%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_markdownpdf.png"))
+```
+
+  5.2 生成pdf文件
+
+安装完成`Markdown PDF`插件后，请确保`README.md`已在VS Code中打开，然后通过`View -> Command Palette`打开`Command Palette`:
+```{r mkreadme-palette, echo=FALSE, fig.cap='打开Command Palette', out.width='75%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_palette.png"))
+```
+
+然后在`Command Palette`中搜索并打开`Markdown PDF: Export (pdf)`:
+```{r mkreadme-exportpdf, echo=FALSE, fig.cap='Markdown PDF Export (pdf)', out.width='60%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_exportpdf.png"))
+```
+
+之后，你应该在VS Code右下角看到正在生成pdf文件的提示消息：
+```{r mkreadme-exportmessage, echo=FALSE, fig.cap='正在生成PDF文件...', out.width='80%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_exportmessage.png"))
+```
+
+提示消息消失后，你可以在`README.md`文件所在的文件夹中找到生成的pdf文件：
+```{r mkreadme-mkpdf, echo=FALSE, fig.cap='正在生成PDF文件...', out.width='60%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_mkpdf.png"))
+```
+
+生成的pdf文件效果如下：
+```{r mkreadme-pdf, echo=FALSE, fig.cap='PDF文件', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "vscode", "mkreadme_pdf.png"))
+```

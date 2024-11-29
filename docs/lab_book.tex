@@ -163,7 +163,7 @@
 
 \title{Face lab book}
 \author{Face lab}
-\date{2024-11-16}
+\date{2024-11-29}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -214,6 +214,8 @@
   第 \ref{jamovi} 章: Jamovi\\
 \item
   第 \ref{zotero} 章: Zotero
+\item
+  第 \ref{vscode} 章: Visual Studio Code
 \end{itemize}
 
 \mainmatter
@@ -475,6 +477,228 @@
 
 汇总：郭沫然\\
 更新于：
+
+\part{其他工具}\label{part-ux5176ux4ed6ux5de5ux5177}
+
+\chapter{Visual Studio Code}\label{vscode}
+
+\section{下载安装}\label{ux4e0bux8f7dux5b89ux88c5}
+
+请在\href{https://code.visualstudio.com/}{Visual Studio Code官网}下载该软件。
+
+\section{制作公开数据的README.md文件}\label{mkreadme}
+
+更新于：2024-11-29
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在Visual Studio Code中新建一个文本文档：
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/vscode/mkreadme_mknewfile} 
+
+}
+
+\caption{在VS Code中新建一个文本文档}\label{fig:mkreadme-mknewfile}
+\end{figure}
+
+之后，你应该看到类似的新建文件：
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/vscode/mkreadme_newfile} 
+
+}
+
+\caption{VS Code中的新建文本文档}\label{fig:mkreadme-newfile}
+\end{figure}
+
+2. 将新建文档保存为\texttt{README.md}文件：
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{img/vscode/mkreadme_saveas1} 
+
+}
+
+\caption{将新建文本文档另存为...}\label{fig:mkreadme-saveas1}
+\end{figure}
+
+在打开的对话框中，请选择保存新建文本文档的位置，并将文件命名为\texttt{README.md}：
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{img/vscode/mkreadme_saveas2} 
+
+}
+
+\caption{重命名文件为“README.md”并选择文件存储位置}\label{fig:mkreadme-saveas2}
+\end{figure}
+
+3. 根据数据文件编辑\texttt{README.md}文件
+
+在\texttt{README.md}文件中，你可以添加根据数据文件的内容，添加列名称(\texttt{Header})和内容描述(\texttt{Description})：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\NormalTok{Header | Description}
+\NormalTok{{-}{-}{-}|{-}{-}{-}}
+\NormalTok{Column1 | Description of Column1}
+\NormalTok{Column2 | Description of Column2}
+\end{Highlighting}
+\end{Shaded}
+
+假定我们用有这样一个数据文件：
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/vscode/mkreadme_datafile} 
+
+}
+
+\caption{数据文件}\label{fig:mkreadme-datafile}
+\end{figure}
+
+我们相应地编辑\texttt{README.md}文件：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+
+\NormalTok{Header | Description}
+\NormalTok{{-}{-}{-}|{-}{-}{-}}
+\NormalTok{SubjCode | Subject Code}
+\NormalTok{Trial Number | trial number}
+\NormalTok{Orientation | orientation of the stimulus: }\InformationTok{\textasciigrave{}upr\textasciigrave{}}\NormalTok{: upright vs }\InformationTok{\textasciigrave{}inv\textasciigrave{}}\NormalTok{: inverted}
+\NormalTok{Congruency | congruency of the trial type in complete composite task: }\InformationTok{\textasciigrave{}con\textasciigrave{}}\NormalTok{: congruent vs }\InformationTok{\textasciigrave{}inc\textasciigrave{}}\NormalTok{: incongruent}
+\NormalTok{Alignment | whether the top and bottom halves of faces are aligned (}\InformationTok{\textasciigrave{}ali\textasciigrave{}}\NormalTok{) or misaligned (}\InformationTok{\textasciigrave{}mis\textasciigrave{}}\NormalTok{)}
+\NormalTok{CorrectAnswer | whether the correct response was the same (}\InformationTok{\textasciigrave{}s\textasciigrave{}}\NormalTok{) or different (}\InformationTok{\textasciigrave{}d\textasciigrave{}}\NormalTok{)}
+\NormalTok{Acc | whether the response was correct (}\InformationTok{\textasciigrave{}1\textasciigrave{}}\NormalTok{) or incorrect (}\InformationTok{\textasciigrave{}0\textasciigrave{}}\NormalTok{)}
+\NormalTok{isSame | whether participant reported the same (}\InformationTok{\textasciigrave{}1\textasciigrave{}}\NormalTok{) or not (}\InformationTok{\textasciigrave{}0\textasciigrave{}}\NormalTok{) for that trial}
+\NormalTok{RT | response time in milliseconds}
+\end{Highlighting}
+\end{Shaded}
+
+4. 编辑\texttt{README.md}文件的同时预览效果
+
+在编辑\texttt{README.md}文件的同时，你可以通过以下方式来预览效果：
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Ctrl\ +\ Shift\ +\ V} (Windows)快捷键
+\item
+  \texttt{Cmd\ +\ Shift\ +\ V} (Mac)快捷键
+\item
+  右键点击\texttt{README.md}文件，选择\texttt{Open\ Preview}选项
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/vscode/mkreadme_openpreview} 
+
+}
+
+\caption{右键点击`README.md`文件，选择`Open Preview`选项}\label{fig:mkreadme-openpreview}
+\end{figure}
+
+预览效果与下图类似：
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/vscode/mkreadme_preview} 
+
+}
+
+\caption{预览md文件}\label{fig:mkreadme-preview}
+\end{figure}
+
+5. 将\texttt{README.md}文件保存为pdf文件
+
+完成编辑\texttt{README.md}文件后，我们可以将其保存为或生成一个pdf文档。
+
+5.1 在VS Code中安装\texttt{Markdown\ PDF}插件
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{img/vscode/mkreadme_extension} 
+
+}
+
+\caption{VS Code中打开Extension}\label{fig:mkreadme-extension}
+\end{figure}
+
+在搜索框中输入\texttt{Markdown\ PDF}，并点击安装(\texttt{Install})：
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{img/vscode/mkreadme_markdownpdf} 
+
+}
+
+\caption{搜索并安装Markdown PDF}\label{fig:mkreadme-markdownpdf}
+\end{figure}
+
+5.2 生成pdf文件
+
+安装完成\texttt{Markdown\ PDF}插件后，请确保\texttt{README.md}已在VS Code中打开，然后通过\texttt{View\ -\textgreater{}\ Command\ Palette}打开\texttt{Command\ Palette}:
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{img/vscode/mkreadme_palette} 
+
+}
+
+\caption{打开Command Palette}\label{fig:mkreadme-palette}
+\end{figure}
+
+然后在\texttt{Command\ Palette}中搜索并打开\texttt{Markdown\ PDF:\ Export\ (pdf)}:
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/vscode/mkreadme_exportpdf} 
+
+}
+
+\caption{Markdown PDF Export (pdf)}\label{fig:mkreadme-exportpdf}
+\end{figure}
+
+之后，你应该在VS Code右下角看到正在生成pdf文件的提示消息：
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{img/vscode/mkreadme_exportmessage} 
+
+}
+
+\caption{正在生成PDF文件...}\label{fig:mkreadme-exportmessage}
+\end{figure}
+
+提示消息消失后，你可以在\texttt{README.md}文件所在的文件夹中找到生成的pdf文件：
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\linewidth]{img/vscode/mkreadme_mkpdf} 
+
+}
+
+\caption{正在生成PDF文件...}\label{fig:mkreadme-mkpdf}
+\end{figure}
+
+生成的pdf文件效果如下：
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/vscode/mkreadme_pdf} 
+
+}
+
+\caption{PDF文件}\label{fig:mkreadme-pdf}
+\end{figure}
 
 \part{实验材料和公开数据}\label{part-ux5b9eux9a8cux6750ux6599ux548cux516cux5f00ux6570ux636e}
 

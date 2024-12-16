@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>第 5 章 Visual Studio Code | Face lab book</title>
+  <meta name="description" content="This is the lab book of Face Lab." />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="第 5 章 Visual Studio Code | Face lab book" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is the lab book of Face Lab." />
+  <meta name="github-repo" content="haiyangjin/lab-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 5 章 Visual Studio Code | Face lab book" />
+  
+  <meta name="twitter:description" content="This is the lab book of Face Lab." />
+  
+
+<meta name="author" content="Face lab" />
+
+
+<meta name="date" content="2024-12-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="zotero.html"/>
+<link rel="next" href="materials.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Face Lab Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 简介</a></li>
+<li class="part"><span><b>I 统计软件</b></span></li>
+<li class="chapter" data-level="2" data-path="jamovi.html"><a href="jamovi.html"><i class="fa fa-check"></i><b>2</b> Jamovi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="jamovi.html"><a href="jamovi.html#方差分析"><i class="fa fa-check"></i><b>2.1</b> 方差分析</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="jamovi.html"><a href="jamovi.html#重复测量方差分析"><i class="fa fa-check"></i><b>2.1.1</b> 重复测量方差分析</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="jamovi.html"><a href="jamovi.html#简单效应分析"><i class="fa fa-check"></i><b>2.2</b> 简单效应分析</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="jamovi.html"><a href="jamovi.html#重复测量方差分析中的简单效应分析"><i class="fa fa-check"></i><b>2.2.1</b> 重复测量方差分析中的简单效应分析</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="jamovi.html"><a href="jamovi.html#t检验"><i class="fa fa-check"></i><b>2.3</b> T检验</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="jamovi.html"><a href="jamovi.html#配对样本t检验"><i class="fa fa-check"></i><b>2.3.1</b> 配对样本T检验</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="jamovi.html"><a href="jamovi.html#额外模块推荐"><i class="fa fa-check"></i><b>2.4</b> 额外模块推荐</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>3</b> R语言</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="r.html"><a href="r.html#r-prepro"><i class="fa fa-check"></i><b>3.1</b> 预处理数据</a></li>
+<li class="chapter" data-level="3.2" data-path="r.html"><a href="r.html#r-rm-anova"><i class="fa fa-check"></i><b>3.2</b> 重复测量方差分析</a></li>
+<li class="chapter" data-level="3.3" data-path="r.html"><a href="r.html#r-plot"><i class="fa fa-check"></i><b>3.3</b> 数据可视化</a></li>
+<li class="chapter" data-level="3.4" data-path="r.html"><a href="r.html#RStudioShortcutKeys"><i class="fa fa-check"></i><b>3.4</b> RStudio Shortcut Keys</a></li>
+</ul></li>
+<li class="part"><span><b>II 科研工具</b></span></li>
+<li class="chapter" data-level="4" data-path="zotero.html"><a href="zotero.html"><i class="fa fa-check"></i><b>4</b> Zotero</a></li>
+<li class="part"><span><b>III 其他工具</b></span></li>
+<li class="chapter" data-level="5" data-path="vscode.html"><a href="vscode.html"><i class="fa fa-check"></i><b>5</b> Visual Studio Code</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="vscode.html"><a href="vscode.html#下载安装"><i class="fa fa-check"></i><b>5.1</b> 下载安装</a></li>
+<li class="chapter" data-level="5.2" data-path="vscode.html"><a href="vscode.html#mkreadme"><i class="fa fa-check"></i><b>5.2</b> 制作公开数据的README.md文件</a></li>
+</ul></li>
+<li class="part"><span><b>IV 实验材料和公开数据</b></span></li>
+<li class="chapter" data-level="6" data-path="materials.html"><a href="materials.html"><i class="fa fa-check"></i><b>6</b> 实验材料</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="materials.html"><a href="materials.html#chicago-face-database-芝加哥面孔数据库"><i class="fa fa-check"></i><b>6.1</b> Chicago Face Database （芝加哥面孔数据库）</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="facetest.html"><a href="facetest.html"><i class="fa fa-check"></i><b>7</b> 面孔加工能力测试</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="facetest.html"><a href="facetest.html#格拉斯哥面孔匹配测试"><i class="fa fa-check"></i><b>7.1</b> 格拉斯哥面孔匹配测试</a></li>
+<li class="chapter" data-level="7.2" data-path="facetest.html"><a href="facetest.html#格拉斯哥面孔匹配测试2"><i class="fa fa-check"></i><b>7.2</b> 格拉斯哥面孔匹配测试2</a></li>
+<li class="chapter" data-level="7.3" data-path="facetest.html"><a href="facetest.html#肯特面孔匹配测试"><i class="fa fa-check"></i><b>7.3</b> 肯特面孔匹配测试</a></li>
+<li class="chapter" data-level="7.4" data-path="facetest.html"><a href="facetest.html#伦敦面孔匹配测试"><i class="fa fa-check"></i><b>7.4</b> 伦敦面孔匹配测试</a></li>
+<li class="chapter" data-level="7.5" data-path="facetest.html"><a href="facetest.html#牛津面孔匹配测试"><i class="fa fa-check"></i><b>7.5</b> 牛津面孔匹配测试</a></li>
+<li class="chapter" data-level="7.6" data-path="facetest.html"><a href="facetest.html#专家化面孔匹配测试"><i class="fa fa-check"></i><b>7.6</b> 专家化面孔匹配测试</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i><b>8</b> 公开数据库</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="opendata.html"><a href="opendata.html#磁共振fmri"><i class="fa fa-check"></i><b>8.1</b> 磁共振（fMRI）</a></li>
+<li class="chapter" data-level="8.2" data-path="opendata.html"><a href="opendata.html#脑电eeg"><i class="fa fa-check"></i><b>8.2</b> 脑电（EEG）</a></li>
+<li class="chapter" data-level="8.3" data-path="opendata.html"><a href="opendata.html#行为"><i class="fa fa-check"></i><b>8.3</b> 行为</a></li>
+</ul></li>
+<li class="appendix"><span><b>附录</b></span></li>
+<li class="chapter" data-level="A" data-path="contribute.html"><a href="contribute.html"><i class="fa fa-check"></i><b>A</b> 如何为本手册作出贡献</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="contribute.html"><a href="contribute.html#直接pull-request"><i class="fa fa-check"></i><b>A.1</b> 直接Pull Request</a></li>
+<li class="chapter" data-level="A.2" data-path="contribute.html"><a href="contribute.html#简易教程"><i class="fa fa-check"></i><b>A.2</b> 简易教程</a>
+<ul>
+<li class="chapter" data-level="A.2.1" data-path="contribute.html"><a href="contribute.html#下载示例"><i class="fa fa-check"></i><b>A.2.1</b> 下载示例</a></li>
+<li class="chapter" data-level="A.2.2" data-path="contribute.html"><a href="contribute.html#安装r和rstudio"><i class="fa fa-check"></i><b>A.2.2</b> 安装R和RStudio</a></li>
+<li class="chapter" data-level="A.2.3" data-path="contribute.html"><a href="contribute.html#打开labbook.rproj"><i class="fa fa-check"></i><b>A.2.3</b> 打开labbook.Rproj</a></li>
+<li class="chapter" data-level="A.2.4" data-path="contribute.html"><a href="contribute.html#确认示例可以运行"><i class="fa fa-check"></i><b>A.2.4</b> 确认示例可以运行</a></li>
+<li class="chapter" data-level="A.2.5" data-path="contribute.html"><a href="contribute.html#创建一个新的rmd文件"><i class="fa fa-check"></i><b>A.2.5</b> 创建一个新的Rmd文件</a></li>
+<li class="chapter" data-level="A.2.6" data-path="contribute.html"><a href="contribute.html#重新build-book"><i class="fa fa-check"></i><b>A.2.6</b> 重新Build book</a></li>
+<li class="chapter" data-level="A.2.7" data-path="contribute.html"><a href="contribute.html#其他"><i class="fa fa-check"></i><b>A.2.7</b> 其他</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="qa.html"><a href="qa.html"><i class="fa fa-check"></i><b>B</b> 常见问题</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="qa.html"><a href="qa.html#r和rstudio相关问题"><i class="fa fa-check"></i><b>B.1</b> R和RStudio相关问题</a></li>
+<li class="chapter" data-level="B.2" data-path="qa.html"><a href="qa.html#格式调整"><i class="fa fa-check"></i><b>B.2</b> 格式调整</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="qa.html"><a href="qa.html#文字"><i class="fa fa-check"></i><b>B.2.1</b> 文字</a></li>
+<li class="chapter" data-level="B.2.2" data-path="qa.html"><a href="qa.html#图片"><i class="fa fa-check"></i><b>B.2.2</b> 图片</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>参考文献</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Face lab book</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="vscode" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">第 5 章</span> Visual Studio Code<a href="vscode.html#vscode" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="下载安装" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> 下载安装<a href="vscode.html#下载安装" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>请在<a href="https://code.visualstudio.com/">Visual Studio Code官网</a>下载该软件。</p>
+</div>
+<div id="mkreadme" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> 制作公开数据的README.md文件<a href="vscode.html#mkreadme" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>更新于：2024-11-29</p>
+<ol style="list-style-type: decimal">
+<li>在Visual Studio Code中新建一个文本文档：</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-mknewfile"></span>
+<img src="img/vscode/mkreadme_mknewfile.png" alt="在VS Code中新建一个文本文档" width="60%" />
+<p class="caption">
+图 5.1: 在VS Code中新建一个文本文档
+</p>
+</div>
+<p>之后，你应该看到类似的新建文件：</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-newfile"></span>
+<img src="img/vscode/mkreadme_newfile.png" alt="VS Code中的新建文本文档" width="100%" />
+<p class="caption">
+图 5.2: VS Code中的新建文本文档
+</p>
+</div>
+<p><br>
+2. 将新建文档保存为<code>README.md</code>文件：</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-saveas1"></span>
+<img src="img/vscode/mkreadme_saveas1.png" alt="将新建文本文档另存为..." width="70%" />
+<p class="caption">
+图 5.3: 将新建文本文档另存为…
+</p>
+</div>
+在打开的对话框中，请选择保存新建文本文档的位置，并将文件命名为<code>README.md</code>：
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-saveas2"></span>
+<img src="img/vscode/mkreadme_saveas2.png" alt="重命名文件为“README.md”并选择文件存储位置" width="80%" />
+<p class="caption">
+图 5.4: 重命名文件为“README.md”并选择文件存储位置
+</p>
+</div>
+<p><br>
+3. 根据数据文件编辑<code>README.md</code>文件</p>
+<p>在<code>README.md</code>文件中，你可以添加根据数据文件的内容，添加列名称(<code>Header</code>)和内容描述(<code>Description</code>)：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb1-1"><a href="vscode.html#cb1-1" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="vscode.html#cb1-2" tabindex="-1"></a>Header | Description</span>
+<span id="cb1-3"><a href="vscode.html#cb1-3" tabindex="-1"></a>---|---</span>
+<span id="cb1-4"><a href="vscode.html#cb1-4" tabindex="-1"></a>Column1 | Description of Column1</span>
+<span id="cb1-5"><a href="vscode.html#cb1-5" tabindex="-1"></a>Column2 | Description of Column2</span></code></pre></div>
+假定我们用有这样一个数据文件：
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-datafile"></span>
+<img src="img/vscode/mkreadme_datafile.png" alt="数据文件" width="100%" />
+<p class="caption">
+图 5.5: 数据文件
+</p>
+</div>
+<p>我们相应地编辑<code>README.md</code>文件：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="vscode.html#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="vscode.html#cb2-2" tabindex="-1"></a>Header | Description</span>
+<span id="cb2-3"><a href="vscode.html#cb2-3" tabindex="-1"></a>---|---</span>
+<span id="cb2-4"><a href="vscode.html#cb2-4" tabindex="-1"></a>SubjCode | Subject Code</span>
+<span id="cb2-5"><a href="vscode.html#cb2-5" tabindex="-1"></a>Trial Number | trial number</span>
+<span id="cb2-6"><a href="vscode.html#cb2-6" tabindex="-1"></a>Orientation | orientation of the stimulus: <span class="in">`upr`</span>: upright vs <span class="in">`inv`</span>: inverted</span>
+<span id="cb2-7"><a href="vscode.html#cb2-7" tabindex="-1"></a>Congruency | congruency of the trial type in complete composite task: <span class="in">`con`</span>: congruent vs <span class="in">`inc`</span>: incongruent</span>
+<span id="cb2-8"><a href="vscode.html#cb2-8" tabindex="-1"></a>Alignment | whether the top and bottom halves of faces are aligned (<span class="in">`ali`</span>) or misaligned (<span class="in">`mis`</span>)</span>
+<span id="cb2-9"><a href="vscode.html#cb2-9" tabindex="-1"></a>CorrectAnswer | whether the correct response was the same (<span class="in">`s`</span>) or different (<span class="in">`d`</span>)</span>
+<span id="cb2-10"><a href="vscode.html#cb2-10" tabindex="-1"></a>Acc | whether the response was correct (<span class="in">`1`</span>) or incorrect (<span class="in">`0`</span>)</span>
+<span id="cb2-11"><a href="vscode.html#cb2-11" tabindex="-1"></a>isSame | whether participant reported the same (<span class="in">`1`</span>) or not (<span class="in">`0`</span>) for that trial</span>
+<span id="cb2-12"><a href="vscode.html#cb2-12" tabindex="-1"></a>RT | response time in milliseconds</span></code></pre></div>
+<p><br>
+4. 编辑<code>README.md</code>文件的同时预览效果</p>
+<p>在编辑<code>README.md</code>文件的同时，你可以通过以下方式来预览效果：</p>
+<ul>
+<li><code>Ctrl + Shift + V</code> (Windows)快捷键</li>
+<li><code>Cmd + Shift + V</code> (Mac)快捷键</li>
+<li>右键点击<code>README.md</code>文件，选择<code>Open Preview</code>选项</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-openpreview"></span>
+<img src="img/vscode/mkreadme_openpreview.png" alt="右键点击`README.md`文件，选择`Open Preview`选项" width="60%" />
+<p class="caption">
+图 5.6: 右键点击<code>README.md</code>文件，选择<code>Open Preview</code>选项
+</p>
+</div>
+预览效果与下图类似：
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-preview"></span>
+<img src="img/vscode/mkreadme_preview.png" alt="预览md文件" width="100%" />
+<p class="caption">
+图 5.7: 预览md文件
+</p>
+</div>
+<p><br>
+5. 将<code>README.md</code>文件保存为pdf文件</p>
+<p>完成编辑<code>README.md</code>文件后，我们可以将其保存为或生成一个pdf文档。</p>
+<p>5.1 在VS Code中安装<code>Markdown PDF</code>插件</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-extension"></span>
+<img src="img/vscode/mkreadme_extension.png" alt="VS Code中打开Extension" width="40%" />
+<p class="caption">
+图 5.8: VS Code中打开Extension
+</p>
+</div>
+在搜索框中输入<code>Markdown PDF</code>，并点击安装(<code>Install</code>)：
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-markdownpdf"></span>
+<img src="img/vscode/mkreadme_markdownpdf.png" alt="搜索并安装Markdown PDF" width="50%" />
+<p class="caption">
+图 5.9: 搜索并安装Markdown PDF
+</p>
+</div>
+<p>5.2 生成pdf文件</p>
+安装完成<code>Markdown PDF</code>插件后，请确保<code>README.md</code>已在VS Code中打开，然后通过<code>View -&gt; Command Palette</code>打开<code>Command Palette</code>:
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-palette"></span>
+<img src="img/vscode/mkreadme_palette.png" alt="打开Command Palette" width="75%" />
+<p class="caption">
+图 5.10: 打开Command Palette
+</p>
+</div>
+然后在<code>Command Palette</code>中搜索并打开<code>Markdown PDF: Export (pdf)</code>:
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-exportpdf"></span>
+<img src="img/vscode/mkreadme_exportpdf.png" alt="Markdown PDF Export (pdf)" width="60%" />
+<p class="caption">
+图 5.11: Markdown PDF Export (pdf)
+</p>
+</div>
+之后，你应该在VS Code右下角看到正在生成pdf文件的提示消息：
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-exportmessage"></span>
+<img src="img/vscode/mkreadme_exportmessage.png" alt="正在生成PDF文件..." width="80%" />
+<p class="caption">
+图 5.12: 正在生成PDF文件…
+</p>
+</div>
+提示消息消失后，你可以在<code>README.md</code>文件所在的文件夹中找到生成的pdf文件：
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-mkpdf"></span>
+<img src="img/vscode/mkreadme_mkpdf.png" alt="正在生成PDF文件..." width="60%" />
+<p class="caption">
+图 5.13: 正在生成PDF文件…
+</p>
+</div>
+生成的pdf文件效果如下：
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:mkreadme-pdf"></span>
+<img src="img/vscode/mkreadme_pdf.png" alt="PDF文件" width="100%" />
+<p class="caption">
+图 5.14: PDF文件
+</p>
+</div>
+
+</div>
+</div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="zotero.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="materials.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/HaiyangJin/lab-book/edit/main/rmd_others/o1-vscode.Rmd",
+"text": "编辑"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["lab_book.pdf", "lab_book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

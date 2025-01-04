@@ -1,0 +1,9 @@
+
+# Glossary {#glossary}
+
+English | 中文
+-- | --
+face processing | 面孔加工（不能用“处理”）  
+above chance | 高于随机水平  
+construct | 构念
+

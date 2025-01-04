@@ -163,7 +163,7 @@
 
 \title{Face lab book}
 \author{Face lab}
-\date{2024-12-16}
+\date{2025-01-04}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1125,6 +1125,70 @@ Ma, D. S., Kantner, J., \& Wittenbrink, B. (2021). Chicago Face Database: Multir
 \item
   \texttt{fig.align=\textquotesingle{}center\textquotesingle{}}：图片的位置，可以设置为 \texttt{center}、\texttt{left} 或者 \texttt{right}。
 \end{itemize}
+
+\chapter{文件命名规则}\label{ux6587ux4ef6ux547dux540dux89c4ux5219}
+
+在日常工作和学习中，同一个文本（例如Word，PowerPoint）可能会迭代很多不同的版本。为了方便交流和后续查找，建议在命名文件时，按照以下规则进行命名。
+
+文件名的整体结构为：\texttt{项目简称\_内容简称\_日期\_版本号.扩展名}。
+
+例如：
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{2faces-inversion\_manuscript\_20250104\_v1.0.docx}；\\
+\item
+  \texttt{2faces-inversion\_预注册\_20250104\_v1.0.docx}；\\
+\item
+  \texttt{2faces-inversion\_开题\_20250104\_v1.0.docx}；\\
+\item
+  \texttt{2faces-inversion\_开题\_20250104\_v1.0.pptx}；\\
+\item
+  \texttt{2faces-inversion\_文献综述\_20250104\_v1.0.docx}。
+\end{itemize}
+
+具体来讲，
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{项目简称}使用尽量少的几个汉字或英文单词表示某个项目，并且要保持在不同文档间的一致（例如该项目有关的Word和PowerPoint都采用相同的项目简称）。
+\item
+  \texttt{内容简称}是对文档内容的简要描述，此部分可省略。
+\item
+  \texttt{日期}格式为\texttt{YYYYMMDD}，表示年月日。该日期通常是建立该新版本文档的日期。
+\item
+  \texttt{版本号}格式为\texttt{vX.Y}，其中\texttt{X}表示大版本号，\texttt{Y}表示小版本号。大版本号在文档内容发生较大变化时（例如文稿内容的框架发生大的变化；有大量内容被删除时）增加，小版本号在文档内容发生较小变化时增加。
+\item
+  \texttt{扩展名}表示文件的类型，例如\texttt{.docx}表示Word文档，\texttt{.pptx}表示PowerPoint文档等。
+\end{itemize}
+
+另外，请注意：
+
+\begin{itemize}
+\tightlist
+\item
+  如果需要对他人的文档进行修改，建议在修改文件的文件名中加入自己的名字缩写，例如\texttt{2faces-inversion\_manuscript\_20250104\_v1.0\_zs.docx} （这里\texttt{zs}是zhangsan的缩写）。
+\item
+  文件名中不要出现空格，可以使用短横线\texttt{-}代替。
+\item
+  文件名中不要出现特殊字符，例如\texttt{\textasciitilde{}!@\#\$\%\^{}\&*()+}等。
+\end{itemize}
+
+\chapter{Glossary}\label{glossary}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+English & 中文 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+face processing & 面孔加工（不能用``处理''） \\
+above chance & 高于随机水平 \\
+construct & 构念 \\
+\end{longtable}
 
 \bibliography{references.bib,packages.bib}
 

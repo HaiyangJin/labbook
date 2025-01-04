@@ -84,3 +84,5 @@ r和rstudio相关问题
 文字
 文字颜色
 图片
+文件命名规则
+glossary

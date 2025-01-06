@@ -3,5 +3,216 @@
 # Zotero {#zotero}
 
 汇总：郭沫然  
-更新于：
+更新于：2025-01-06
+
+## 下载安装
+
+  [官方下载网址](https://www.zotero.org/)
+  
+  可以直接参考下方链接网址里的安装教程进行安装配置。
+  
+  [zotero安装教程](https://blog.csdn.net/qq_47885795/article/details/141631652?spm=1001.2014.3001.5506)
+  
+  其中的第二部分 “配置” 有需要可以参考但并非日常使用所必要的。可以只看 “安装” 部分以及后面的 “安装插件” 部分。
+
+## 功能简介
+
+### zotero是做什么的
+
+  Zotero是一个参考文献管理器。用来存储、管理和引用参考文献，比如书籍、文章和期刊等。在Zotero中，将每一个文献作为一个条目储存，每一个条目当中可以包含与之相关的其他多种信息和附加条目。
+  
+  广泛地说，Zotero是收集和组织研究信息和资源的工具。
+可以储存并管理的条目类型广泛，几乎可以是任何东西，包括书籍、文章、报告、网页、艺术品、电影、信件、手稿、录音、账单、案例或法规等等。
+
+```{r zotero-workInform, echo=FALSE, fig.cap='作品信息', out.width='40%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_workInform.png"))
+```
+
+```{r zotero-interface, echo=FALSE, fig.cap='主界面', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_interface.png"))
+```
+
+  通常储存的条目显示在Zotero的中心列表中。条目的相关信息显示在右列表中。包括标题、创建者、出版商、日期、页码以及引用条目所需的任何其他数据。
+
+```{r zotero-worktype, echo=FALSE, fig.cap='作品类型', out.width='40%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_worktype.png"))
+```
+
+### 用于管理条目的功能
+
+#### 文件夹：
+
+  右键单击“我的图书馆”或单击左侧窗格上方的“新收藏”按钮，以创建一个文件夹，可以用来分类存放文献条目。同一个条目可以同时属于多个收藏夹。
+
+```{r zotero-list, echo=FALSE, fig.cap='文件夹列表', out.width='40%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_list.png"))
+```
+
+#### 标签：
+
+  标签是自己命名的。可以对每一个条目根据需要分配多少个标签。使用左侧列表底部的标签选择器或通过右侧信息列表中的标签选项卡添加或删除标签。标签的颜色一共有六个。在阅读文献的过程中不断地为文献添加标签，可以更好管理文献，配合上搜索功能，可以提高对于文献的管理效率。
+
+```{r zotero-tag, echo=FALSE, fig.cap='标签', out.width='90%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_tag.png"))
+```
+
+#### 搜索功能以及对搜索的储存：
+
+  Zotero支持对条目进行快速搜索，包括储存条目的信息数据，标签，或全文内容匹配搜索等，在Zotero工具栏中找到搜索选项。点击搜索框图标会打开高级搜索列表，允许进行更复杂或更窄范围的搜索。另外高级搜索结果可以保存在左侧条目列表中，类似于一个集合，会自动更新新的匹配条目。
+
+```{r zotero-search, echo=FALSE, fig.cap='搜索', out.width='80%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_search.png"))
+```
+
+### 储存条目及其附件
+
+#### 附件及其类型：
+
+  条目可以附加注释、文件和链接等附件。这些附件会列在条目下方的列表中。通过点击条目旁边的箭头可以显示或隐藏附件。任何类型的文件都可以附加到条目中。使用Zotero工具栏中的“添加附件(回形针)”按钮，通过右键点击条目或者通过拖放来添加附件。当在浏览器中使用Zotero连接器导入条目时，也可以自动下载相关文件，如文献的PDF原文或是相关网页等。
+
+```{r zotero-attachment, echo=FALSE, fig.cap='附件', out.width='40%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_attachment.png"))
+```
+
+#### 从浏览器行直接导入条目：
+
+  使用Chrome、Firefox或Edge的Zotero连接器，可以很轻松地从网页上将文献导入Zotero中从而创建新的储存条目。只需点击连接器按钮，Zotero就可以自动创建适当类型的条目并识别和填充条目的相关信息字段。
+
+```{r zotero-connector, echo=FALSE, fig.cap='浏览器连接器', out.width='90%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_connector.png"))
+```
+
+#### 网页保存：
+
+  如果Zotero连接器不能识别页面上的数据，它仍然可以将文献的页面保存为带有网页快照附加的储存网页的条目。虽然这样会保存基本的信息数据(标题、URL、访问日期等)，但还是需要手动填写额外的信息以及附件。
+
+```{r zotero-websave, echo=FALSE, fig.cap='网页快照', out.width='40%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_websave.png"))
+```
+
+#### 按标识符添加条目：
+
+  Zotero可以使用ISBN号、数字对象标识符(DOI)或PubMed ID自动添加条目。通过在Zotero工具栏中单击按标识符添加项来完成。这个功能甚至可以一次性粘贴或输入多个标识符的列表。
+
+```{r zotero-IDsearch, echo=FALSE, fig.cap='标识符搜索', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_IDsearch.png"))
+```
+
+#### 手动添加：
+
+  以通过单击Zotero工具栏中的NewItem按钮并选择适当的项类型来手动添加条目。然后可以在右侧信息列表中手动添加相关信息。虽然通常不建议手动添加，但对于无法在线获得的文献来说可能很有用。
+
+```{r zotero-savebyhand, echo=FALSE, fig.cap='手动添加', out.width='40%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_savebyhand.png"))
+```
+
+### 对文献条目的引用
+
+#### 生成指定文献的参考文献格式：
+
+  右键点击所要生成参考文献的条目，选择“用所选条目创建参考文献表”。
+
+```{r zotero-reference-taxt-1, echo=FALSE, fig.cap='生成参考文献格式', out.width='70%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_reference_taxt_1.png"))
+```
+  
+  我们一般用APA7格式，点击 OK 复制到剪切板进行粘贴就好。
+
+```{r zotero-reference-taxt-2, echo=FALSE, fig.cap='生成参考文献格式2', out.width='70%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_reference_taxt_2.png"))
+```
+
+#### 在文章中添加引用：
+
+  Zotero的Word插件允许用户直接从Word中插入引文信息。通过进入Word上方工具栏中的“Zotero”，点击Add/Edit Citation来使用，而后在出现的输入框中搜索确定要插入的文献。这个功能使我们在写文章时可以很方便的随时引用多个文献信息。对于文本、脚注和尾注的引用都是支持的。
+    
+#### 自动生成参考文献书目：
+
+  使用Zotero在Word中的插件点击Add/Edit Bibliography可以根据引用的文献自动生成参考书目。
+    
+```{r zotero-citation, echo=FALSE, fig.cap='添加引文', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_citation.png"))
+```
+
+### 同步与小组协作功能
+
+#### 数据同步：
+
+  Zotero可以在多台计算机中同步用户数据。库中的条目和笔记通过Zotero服务器同步。同步到Zotero服务器的条目可以通过zotero.org帐户在线访问。并且还可以与他人共享自己的数据库，或根据选定的条目创建自定义简历。在zotero.org上为读者、公众和其他使用自己出版物或发表的期刊的研究人员提供研究副本。
+    
+#### 小组文库：
+
+  Zotero用户可以创建协作或兴趣小组。通过共享的小组数据库，我们可以通过在线的和通过Zotero客户端来协作管理研究资源和材料。
+
+```{r zotero-groupwork, echo=FALSE, fig.cap='小组', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_groupwork.png"))
+```
+
+## 拓展插件
+
+### 插件安装方法（也可直接参考文章开头推荐的博客）
+  
+  点击链接，进入[Zotero 插件商店](https://zotero-chinese.com/plugins/)
+  
+  选择与自己对于的版本，筛选类型或者直接搜索插件进行下载。
+
+```{r zotero-plugins-interface, echo=FALSE, fig.cap='插件商店', out.width='70%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_interface.png"))
+```
+
+```{r zotero-plugins-install-1, echo=FALSE, fig.cap='插件安装1', out.width='70%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_install_1.png"))
+```
+  
+  将下载的插件（.xpi文件）拖拽进Manage Your Pligins界面即可安装成功。（注意版本对应）
+
+```{r zotero-plugins-install-2, echo=FALSE, fig.cap='插件安装2', out.width='70%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_install_2.png"))
+```
+
+### 常用插件推荐
+
+  可根据自身需求进行安装。
+    
+**1.Jasminum 茉莉花（必装，后面在Word中文献引用时非常实用，但有时年份可能会有点错误，注意一下）**
+
+  支持中文题录信息下载，结合pdftk还可以为论文的PDF文件添加书签。能够抓取CNKI、万方、维普、百度学术等中文网址的资源，同时支持CAJ格式，等功能。      
+
+**2.Translate for Zotero**
+
+  将PDF、EPub、网页、元数据、注释、注解翻译为目标语言，支持20多种翻译服务。特别适合英文文献阅读 ，可实现将pdf中选中的文字翻译为指定语言，并将译文显示在弹窗或右侧的选项卡窗口中。
+
+**3.Better BibTex for Zotero**
+
+  直接从知网、谷歌学术等抓取参考文献信息，并下载PDF保存在Zotero的文献库中。自动生成reference.bib文件，并与文献库内容保持同步更新。特别适用于LaTeX写论文，能让Zotero和LaTeX更好地搭配使用进行文献引用。（用LaTeX写论文也可以研究一下）
+
+**4.Better Notes for Zotero**
+
+  集成了所有关于笔记管理的功能，支持主笔记创建、其他笔记链接、模板使用等，插件提供丰富的自定义选项，用户可以根据自己的需求调整界面布局和功能配置，插件支持Markdown格式，用户可以在Zotero内部与外部Markdown文件之间实现自动同步； 提供了多样化的笔记模板，让数据整理变得简单快捷，支持批量操作，减少重复劳动。
+
+**5.Ethereal Style**
+
+  支持标签建立、网络图谱构建、进度可视化等功能。可以解决Zotero不显示标签文字的问题，显示阅读进度和标注进度，自定义作者列显示格式，修改PDF底色等。
+
+**6.NoteroEthereal Reference**
+  
+  自动识别文献的参考文献，并将其显示在右侧栏目，点击加号可直接添加到Zotero管理器中，无需打开网页。
+    
+**7.Green Frog**
+
+  从easyScholar更新期刊信息，获取期刊或会议论文的JCR分区、中科院分区、影响因子等信息。
+  
+  [配置方法](https://blog.csdn.net/tyutwuxuan/article/details/143827364?ops_request_misc=&request_id=&biz_id=102&utm_term=zotero%E4%B8%8Eeasyscholar&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-143827364.142^v101^control&spm=1018.2226.3001.4187)可以参考链接中博客的教程。
+
+**8.PDF Figure**
+
+  在PDF内实现图表解析和注释。
+
+**9.zotxt**
+
+  文本扩展插件，用于文本编辑和扩展功能。
+
+**10.Awesome GPT**
+
+  实现Zotero和ChatGPT的联动，更快更好地进行阅读和管理文献。
 

@@ -7,9 +7,10 @@
 
 例如：  
 
-- `2faces-inversion_manuscript_20250104_v1.0.docx`；  
+- `2faces-inversion_20250104_v1.0.docx`；  
+- `2faces-inversion_manuscript_20250104_v0.1.docx`；  
 - `2faces-inversion_预注册_20250104_v1.0.docx`；  
-- `2faces-inversion_开题_20250104_v1.0.docx`；  
+- `2faces-inversion_开题_20250104_v2.0.docx`；  
 - `2faces-inversion_开题_20250104_v1.0.pptx`；  
 - `2faces-inversion_文献综述_20250104_v1.0.docx`。  
 

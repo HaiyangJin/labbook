@@ -1,0 +1,137 @@
+# One Drive {#onedrive}
+
+汇总：郭沫然  
+更新于：2025-01-20
+
+  OneDrive是微软公司推出的文件和照片的云存储空间APP，常被用于同步盘。对于win10和win11系统，OneDrive已预装至计算机中。
+  
+  OneDrive个人用户只有5G的免费云空间，高校学生和老师可通过学校邮箱申请微软账号获得100G的免费云空间。
+  
+## 学生个人邮箱
+
+  邮箱名为: 学号@mails.zstu.edu.cn
+  
+  登录密码和统一身份认证密码一致，先激活统一身份系统（SSO）账号后方可使用学生邮箱。
+  
+  可以在[网易企业邮箱](https://mailh.qiye.163.com)登陆来收发邮件。
+  
+```{r OneDrive-MailBox, echo=FALSE, fig.cap='MailBox', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "MailBox.png"))
+```
+  
+## 注册
+
+  进入[Microsoft 365](https://www.microsoft.com/zh-cn/microsoft-365)网站。
+  
+  下滑至界面最底部，找到 “Office 教育版” 。
+  
+```{r OneDrive-OfficeEducation, echo=FALSE, fig.cap='OfficeEducation', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Office_Education.png"))
+```
+
+  进入后点击 “开始使用” 进入注册界面。
+  
+```{r OneDrive-OfficeEducation2, echo=FALSE, fig.cap='OfficeEducation2', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Office_Education2.png"))
+```
+
+  点击 “我是学生”，开始创建账户。
+
+```{r OneDrive-Register1, echo=FALSE, fig.cap='Register1', out.width='80%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Register_1.png"))
+```
+
+  填写学校个人邮箱，然后根据引导填写注册所需的信息以及邮箱验证码。在上面（“学生个人邮箱“那一节）提到的邮箱网址查看验证码。
+  
+```{r OneDrive-Register2, echo=FALSE, fig.cap='Register2', out.width='80%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Register_2.png"))
+```
+
+```{r OneDrive-Register3, echo=FALSE, fig.cap='Register3', out.width='80%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Register_3.png"))
+```
+
+  邀请同事这一步不用管，点击 “跳过并转到Office 365教育版” 。
+
+```{r OneDrive-Invitation, echo=FALSE, fig.cap='Invitation', out.width='80%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Invitation.png"))
+```
+
+  最后点击 “开始” 完成注册。
+
+```{r OneDrive-RegisterEnd, echo=FALSE, fig.cap='RegisterEnd', out.width='80%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "RegisterEnd.png"))
+```
+
+## 使用
+
+  通常Win10和Win11系统会自带OneDrive，在电脑里找到OneDrive（通常在任务栏右侧的 “云朵” 图标就是，如下图）打开登录。
+  
+```{r OneDrive-OneDriveIcon, echo=FALSE, fig.cap='OneDrive Icon', out.width='90%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "OneDrive_Icon.png"))
+```
+  
+  如果电脑上没有，或者电脑不是最新版OneDrive，也可以去[OneDrive官网](https://www.microsoft.com/en-us/microsoft-365/onedrive/download?ocid=ORSEARCH_Bing)下载OneDrive最新版安装软件。
+  
+  点击我的电脑，然后点击OneDrive，就会弹出登录界面，然后输入上面注册的账号就可以登录了。会弹出一个选择“个人”还是“工作或学校”，点击工作或学校，然后输入密码。
+  
+  **注意：**记得选择自己想要保存到本地磁盘的位置，建议不要保存到C盘，例如E盘。
+  
+```{r OneDrive-LogIn, echo=FALSE, fig.cap='Log in', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Log_in.png"))
+```
+
+  随后会让你选择需要同步备份的文件夹，按自己的需要进行选择。
+  
+  后期在设置的 “同步并备份” 中的 “ 管理备份” 可以重新设置。
+  
+```{r OneDrive-Setting, echo=FALSE, fig.cap='Setting', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Setting.png"))
+```
+  
+  在设置的 “账户” 中的 “选择文件夹” 中也可以选择在自己账户的OneDrive中可用的文件夹。
+  
+```{r OneDrive-ChooseFolders1, echo=FALSE, fig.cap='ChooseFolders1', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "ChooseFolders1.png"))
+```
+  
+```{r OneDrive-ChooseFolders2, echo=FALSE, fig.cap='ChooseFolders2', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "ChooseFolders2.png"))
+```
+  
+  随后正常使用即可。
+  
+### 更改OneDrive的保存位置
+
+  **注意：**在进行更改保存位置操作前，记得关闭要备份文件中所有正在打开的内容，不然可能出现在更改位置后，有些文档被自动创建副本的现象。
+  
+```{r OneDrive-Error1, echo=FALSE, fig.cap='Error', out.width='60%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Error1.png"))
+```
+
+  打开OneDrive的设置，点击 “取消链接此电脑”，确定 “取消链接账户”。
+  
+```{r OneDrive-ChangeAddress1, echo=FALSE, fig.cap='ChangeAddress1', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "ChangeAddress1.png"))
+```
+  
+  然后重新登陆你的OneDrive帐号，在显示选择保存位置的页面点击 “更改位置” 选择要保存到的地址。
+  
+```{r OneDrive-ChangeAddress2, echo=FALSE, fig.cap='ChangeAddress2', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "ChangeAddress2.png"))
+```
+  
+  然后等待文件重新备份就可以了。（需要一点耐心）
+
+### 网页登陆
+
+  可以在自己的OneDrive中找到 “在线查看”，随后就会自动打开浏览器在线查看已备份的文档。
+
+```{r OneDrive-Online1, echo=FALSE, fig.cap='Online1', out.width='90%', fig.align='center'}
+knitr::include_graphics(file.path("img", "OneDrive", "Online1.png"))
+```
+  
+  也可以进入[OneDrive官网](https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage)登陆在线查看（或许需要科学上网）。
+  
+  在线登录方便跨设备查看。
+

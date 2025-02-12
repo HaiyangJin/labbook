@@ -163,7 +163,7 @@
 
 \title{Face lab book}
 \author{Face lab}
-\date{2025-01-20}
+\date{2025-02-12}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -834,6 +834,195 @@ Zotero用户可以创建协作或兴趣小组。通过共享的小组数据库�
 \textbf{10.Awesome GPT}
 
 实现Zotero和ChatGPT的联动，更快更好地进行阅读和管理文献。
+
+\chapter{使用Zotero插入国标格式参考文献}\label{zotero-cite-cn}
+
+汇总：肖雯瑄\\
+更新于：2025-02-12
+
+\section{引用前的准备工作}\label{ux5f15ux7528ux524dux7684ux51c6ux5907ux5de5ux4f5c}
+
+\subsection{必需插件的下载}\label{ux5fc5ux9700ux63d2ux4ef6ux7684ux4e0bux8f7d}
+
+1.\textbf{Zotero Sci-hub}：该插件利用Sci-Hub自动下载带有DOI条目的PDF文献，后续会自动更新，如果地址失效需要手动更新有效地址。
+
+\href{https://github.com/ethanwillis/zotero-scihub}{下载网址}
+
+2.\textbf{Jasminum茉莉花}：该插件提供知网数据抓取、作者姓名拆分合并和中文PDF/CAJ元数据拉取等功能。
+
+\href{https://github.com/l0o0/jasminum}{下载网址}
+
+\subsection{所需插件安装}\label{ux6240ux9700ux63d2ux4ef6ux5b89ux88c5}
+
+1.将2个插件的.xpi文件下载至本地（一般是在Releases Page）
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/plugins_download} 
+
+}
+
+\caption{插件下载}\label{fig:plugins-download}
+\end{figure}
+
+2.将下载好的插件安装至Zotero：工具-附加组件-从本地安装插件（安装好后可在编辑-首选项中查看）
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/plugins_install_1} 
+
+}
+
+\caption{打开插件安装界面}\label{fig:plugins-install-interface}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/plugins_install_2} 
+
+}
+
+\caption{插件安装}\label{fig:plugins-install}
+\end{figure}
+
+3.插件设置
+① Sci-hub地址失效时需要手动更新。
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/plugins_Scihub_setting} 
+
+}
+
+\caption{Sci-hub插件配置}\label{fig:plugins-Scihub-setting}
+\end{figure}
+
+② Jasminum茉莉花的中文插件设置全选。
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/plugins_Jasminum_setting} 
+
+}
+
+\caption{Jasminum插件配置}\label{fig:plugins-Jasminum-setting}
+\end{figure}
+
+\subsection{引用格式安装}\label{ux5f15ux7528ux683cux5f0fux5b89ux88c5}
+
+1.先将\textbf{国标格式}下载到本地
+
+\href{downloads/china-national-standard-gb.csl}{点击下载国标格式}
+
+2.打开引用的设置界面：编辑-首选项-引用
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation_setting} 
+
+}
+
+\caption{打开引用设置界面}\label{fig:ciation-setting-interface}
+\end{figure}
+
+3.加载要求的国标引用格式
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation_setting_1} 
+
+}
+
+\caption{添加要求的国标引用格式}\label{fig:ciation-setting-load}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation_setting_2} 
+
+}
+
+\caption{选择要求的国标引用格式}\label{fig:ciation-setting-select}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation_setting_3} 
+
+}
+
+\caption{确定添加要求的国标引用格式}\label{fig:ciation-setting-confirm}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation_setting_4} 
+
+}
+
+\caption{成功加载要求的国标引用格式}\label{fig:ciation-setting-succeed}
+\end{figure}
+
+\section{如何在Word中进行文献引用}\label{ux5982ux4f55ux5728wordux4e2dux8fdbux884cux6587ux732eux5f15ux7528}
+
+在Word中进行文献引用时，要确保Zotero是打开状态，且有要引用的文献的pdf及相关的信息（如发表时间、文献作者、期刊、刊号等）
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation1} 
+
+}
+
+\caption{Word中Zotero的引用方法}\label{fig:word-ciation}
+\end{figure}
+
+\subsection{引用英文文献}\label{ux5f15ux7528ux82f1ux6587ux6587ux732e}
+
+点击Add/Edit Citation，在弹出来的搜索框内通过文献名/作者名进行搜索，按ENTER确定选择。如果只需要引用一篇文献，再按ENTER即可；如果需要引用多篇文献，直接再次搜索，确定引用完成后，再按ENTER完成引用。
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation2} 
+
+}
+
+\caption{英文文献的引用方法}\label{fig:English-ciation}
+\end{figure}
+
+注：有时英文文献引用可能会出现问题，如引用中出现中文字符，这是因为Zotero里面的该文献的目录信息的语言显示错误，改为en即可。
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation5} 
+
+}
+
+\caption{英文文献引用出现问题时...}\label{fig:English-ciation-problem}
+\end{figure}
+
+\subsection{引用中文文献}\label{ux5f15ux7528ux4e2dux6587ux6587ux732e}
+
+不同于英文文献，中文文献引用时，需要在弹出来的搜索框点击``Z''旁边的下三角，选中经典视图后进行引用。
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation3} 
+
+}
+
+\caption{中文文献的搜索}\label{fig:Chinese-ciation}
+\end{figure}
+
+多篇文献的引用是通过``经典视图-多重来源''进行的。
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{img/zotero-cite-cn/ciation4} 
+
+}
+
+\caption{中文文献的引用方法}\label{fig:Chinese-mutiple-ciation}
+\end{figure}
 
 \part{其他工具}\label{part-ux5176ux4ed6ux5de5ux5177}
 

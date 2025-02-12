@@ -1,0 +1,115 @@
+# 使用Zotero插入国标格式参考文献 {#zotero-cite-cn}
+
+汇总：肖雯瑄  
+更新于：2025-02-12
+
+## 引用前的准备工作
+
+### 必需插件的下载
+  
+  1.**Zotero Sci-hub**：该插件利用Sci-Hub自动下载带有DOI条目的PDF文献，后续会自动更新，如果地址失效需要手动更新有效地址。
+
+  [下载网址](https://github.com/ethanwillis/zotero-scihub)
+  
+  2.**Jasminum茉莉花**：该插件提供知网数据抓取、作者姓名拆分合并和中文PDF/CAJ元数据拉取等功能。
+  
+  [下载网址](https://github.com/l0o0/jasminum)
+
+### 所需插件安装
+
+  1.将2个插件的.xpi文件下载至本地（一般是在Releases Page）
+
+```{r plugins-download, echo=FALSE, fig.cap='插件下载', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "plugins_download.png"))
+```
+
+  2.将下载好的插件安装至Zotero：工具-附加组件-从本地安装插件（安装好后可在编辑-首选项中查看）
+
+```{r plugins-install-interface, echo=FALSE, fig.cap='打开插件安装界面', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "plugins_install_1.png"))
+```
+
+```{r plugins-install, echo=FALSE, fig.cap='插件安装', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "plugins_install_2.png"))
+```
+
+  3.插件设置
+  ① Sci-hub地址失效时需要手动更新。
+
+```{r plugins-Scihub-setting, echo=FALSE, fig.cap='Sci-hub插件配置', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "plugins_Scihub_setting.png"))
+```  
+
+  ② Jasminum茉莉花的中文插件设置全选。
+  
+```{r plugins-Jasminum-setting, echo=FALSE, fig.cap='Jasminum插件配置', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "plugins_Jasminum_setting.png"))
+```  
+
+### 引用格式安装
+
+  1.先将**国标格式**下载到本地
+  
+  [点击下载国标格式](downloads/china-national-standard-gb.csl)
+  
+  2.打开引用的设置界面：编辑-首选项-引用
+  
+```{r ciation-setting-interface, echo=FALSE, fig.cap='打开引用设置界面', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation_setting.png"))
+``` 
+
+  3.加载要求的国标引用格式
+  
+```{r ciation-setting-load, echo=FALSE, fig.cap='添加要求的国标引用格式', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation_setting_1.png"))
+``` 
+
+```{r ciation-setting-select, echo=FALSE, fig.cap='选择要求的国标引用格式', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation_setting_2.png"))
+``` 
+  
+```{r ciation-setting-confirm, echo=FALSE, fig.cap='确定添加要求的国标引用格式', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation_setting_3.png"))
+``` 
+
+```{r ciation-setting-succeed, echo=FALSE, fig.cap='成功加载要求的国标引用格式', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation_setting_4.png"))
+``` 
+
+## 如何在Word中进行文献引用
+
+  在Word中进行文献引用时，要确保Zotero是打开状态，且有要引用的文献的pdf及相关的信息（如发表时间、文献作者、期刊、刊号等）
+  
+```{r word-ciation, echo=FALSE, fig.cap='Word中Zotero的引用方法', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation1.png"))
+``` 
+
+### 引用英文文献
+  
+  点击Add/Edit Citation，在弹出来的搜索框内通过文献名/作者名进行搜索，按ENTER确定选择。如果只需要引用一篇文献，再按ENTER即可；如果需要引用多篇文献，直接再次搜索，确定引用完成后，再按ENTER完成引用。
+  
+```{r English-ciation, echo=FALSE, fig.cap='英文文献的引用方法', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation2.png"))
+```   
+
+  注：有时英文文献引用可能会出现问题，如引用中出现中文字符，这是因为Zotero里面的该文献的目录信息的语言显示错误，改为en即可。
+ 
+```{r English-ciation-problem, echo=FALSE, fig.cap='英文文献引用出现问题时...', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation5.png"))
+```    
+  
+### 引用中文文献
+
+  不同于英文文献，中文文献引用时，需要在弹出来的搜索框点击“Z”旁边的下三角，选中经典视图后进行引用。
+  
+```{r Chinese-ciation, echo=FALSE, fig.cap='中文文献的搜索', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation3.png"))
+```   
+
+  多篇文献的引用是通过“经典视图-多重来源”进行的。
+
+```{r Chinese-mutiple-ciation, echo=FALSE, fig.cap='中文文献的引用方法', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero-cite-cn", "ciation4.png"))
+```  
+
+

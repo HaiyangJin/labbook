@@ -3,17 +3,15 @@
 # Zotero {#zotero}
 
 汇总：郭沫然  
-更新于：2025-01-06
+更新于：`r format(Sys.Date(), '%Y %b %d')`
+
 
 ## 下载安装
 
-  [官方下载网址](https://www.zotero.org/)
+  [官方下载网址](https://www.zotero.org/)，然后直接解压正常安装即可，注意自定义在电脑上安装的位置。
   
-  可以直接参考下方链接网址里的安装教程进行安装配置。
+  （可以参考后面链接网址里的安装教程进行安装配置。[zotero安装教程](https://blog.csdn.net/qq_47885795/article/details/141631652?spm=1001.2014.3001.5506)）
   
-  [zotero安装教程](https://blog.csdn.net/qq_47885795/article/details/141631652?spm=1001.2014.3001.5506)
-  
-  其中的第二部分 “配置” 有需要可以参考但并非日常使用所必要的。可以只看 “安装” 部分以及后面的 “安装插件” 部分。
 
 ## 功能简介
 
@@ -174,45 +172,83 @@ knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_install_2.png
 
   可根据自身需求进行安装。
     
-**1.Jasminum 茉莉花（必装，后面在Word中文献引用时非常实用，但有时年份可能会有点错误，注意一下）**
+**1.[Jasminum 茉莉花](https://github.com/l0o0/jasminum#readme)（必装，后面在Word中文献引用时非常实用，但有时年份可能会有点错误，注意一下）**
 
   支持中文题录信息下载，结合pdftk还可以为论文的PDF文件添加书签。能够抓取CNKI、万方、维普、百度学术等中文网址的资源，同时支持CAJ格式，等功能。      
 
-**2.Translate for Zotero**
+**2.[Translate for Zotero](https://github.com/windingwind/zotero-pdf-translate#readme)**
 
   将PDF、EPub、网页、元数据、注释、注解翻译为目标语言，支持20多种翻译服务。特别适合英文文献阅读 ，可实现将pdf中选中的文字翻译为指定语言，并将译文显示在弹窗或右侧的选项卡窗口中。
 
-**3.Better BibTex for Zotero**
+**3.[Better BibTex for Zotero](https://github.com/retorquere/zotero-better-bibtex#readme)**
 
   直接从知网、谷歌学术等抓取参考文献信息，并下载PDF保存在Zotero的文献库中。自动生成reference.bib文件，并与文献库内容保持同步更新。特别适用于LaTeX写论文，能让Zotero和LaTeX更好地搭配使用进行文献引用。（用LaTeX写论文也可以研究一下）
 
-**4.Better Notes for Zotero**
+**4.[Better Notes for Zotero](https://github.com/windingwind/zotero-better-notes#readme)**
 
   集成了所有关于笔记管理的功能，支持主笔记创建、其他笔记链接、模板使用等，插件提供丰富的自定义选项，用户可以根据自己的需求调整界面布局和功能配置，插件支持Markdown格式，用户可以在Zotero内部与外部Markdown文件之间实现自动同步； 提供了多样化的笔记模板，让数据整理变得简单快捷，支持批量操作，减少重复劳动。
 
-**5.Ethereal Style**
+**5.[Ethereal Style](https://github.com/MuiseDestiny/zotero-style#readme)**
 
   支持标签建立、网络图谱构建、进度可视化等功能。可以解决Zotero不显示标签文字的问题，显示阅读进度和标注进度，自定义作者列显示格式，修改PDF底色等。
 
-**6.NoteroEthereal Reference**
+**6.[Ethereal Reference](https://github.com/MuiseDestiny/zotero-reference#readme)**
   
   自动识别文献的参考文献，并将其显示在右侧栏目，点击加号可直接添加到Zotero管理器中，无需打开网页。
+
+**7.[Notero](https://github.com/dvanoni/notero)**
+
+  帮助管理笔记，帮助在笔记中引用和链接参考文献，等功能。
     
-**7.Green Frog**
+**8.[Green Frog](https://github.com/redleafnew/zotero-updateifsE#readme)**
 
   从easyScholar更新期刊信息，获取期刊或会议论文的JCR分区、中科院分区、影响因子等信息。
   
   [配置方法](https://blog.csdn.net/tyutwuxuan/article/details/143827364?ops_request_misc=&request_id=&biz_id=102&utm_term=zotero%E4%B8%8Eeasyscholar&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-143827364.142^v101^control&spm=1018.2226.3001.4187)可以参考链接中博客的教程。
 
-**8.PDF Figure**
+**9.[PDF Figure](https://github.com/MuiseDestiny/zotero-figure#readme)**
 
   在PDF内实现图表解析和注释。
 
-**9.zotxt**
+**10.[zotxt](https://github.com/egh/zotxt#readme)**
 
   文本扩展插件，用于文本编辑和扩展功能。
 
-**10.Awesome GPT**
+**11.[Awesome GPT](https://github.com/MuiseDestiny/zotero-gpt#readme)**
 
   实现Zotero和ChatGPT的联动，更快更好地进行阅读和管理文献。
+  
+  同时也可以改为与deepseek进行联动，步骤如下。
+  
+  1.进入[硅基流动官网](https://cloud.siliconflow.cn/models)，注册账号登录后点击API密钥。
+  
+```{r zotero-plugins-deepseek-1, echo=FALSE, fig.cap='硅基流动官网', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_deepseek_1.png"))
+```
 
+  2.新建API密钥，并复制密钥。
+
+```{r zotero-plugins-deepseek-2, echo=FALSE, fig.cap='API密钥获取', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_deepseek_2.png"))
+```
+
+  3.进入Plugins,点击Awesome GPT的Manage,然后允许自动更新。
+  
+```{r zotero-plugins-deepseek-3, echo=FALSE, fig.cap='GPT插件设置1', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_deepseek_3.png"))
+```
+
+```{r zotero-plugins-deepseek-4, echo=FALSE, fig.cap='GPT插件设置2', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_deepseek_4.png"))
+```
+
+  4.进入zotero的设置，按照红色框里面的内容进行选择，把获得的密钥粘贴到APIKey和Key，其他的选择按照红框里面一样即可，随后点击Test（这个步骤需要等待一段时间，如果不行就多试几次）
+  
+```{r zotero-plugins-deepseek-5, echo=FALSE, fig.cap='GPT插件设置3', out.width='100%', fig.align='center'}
+knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_deepseek_5.png"))
+```  
+  
+  
+  
+  
+  

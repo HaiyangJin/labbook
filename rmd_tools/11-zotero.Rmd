@@ -3,7 +3,7 @@
 # Zotero {#zotero}
 
 汇总：郭沫然  
-更新于：`r format(Sys.Date(), '%Y %b %d')`
+更新于：2025-03-19
 
 
 ## 下载安装

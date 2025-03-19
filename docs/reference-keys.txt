@@ -35,6 +35,11 @@ fig:zotero-groupwork
 fig:zotero-plugins-interface
 fig:zotero-plugins-install-1
 fig:zotero-plugins-install-2
+fig:zotero-plugins-deepseek-1
+fig:zotero-plugins-deepseek-2
+fig:zotero-plugins-deepseek-3
+fig:zotero-plugins-deepseek-4
+fig:zotero-plugins-deepseek-5
 fig:plugins-download
 fig:plugins-install-interface
 fig:plugins-install

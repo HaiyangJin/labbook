@@ -1,7 +1,7 @@
 book_filename: "lab_book"
 clean: [packages.bib, bookdown.bbl]
 rmd_files: "index.Rmd"
-rmd_subdir: ["rmd_stats", "rmd_tools", "rmd_others", "rmd_stimdata", "rmd_appendices"]
+rmd_subdir: ["rmd_stats", "rmd_tools", "rmd_others", "rmd_stimdata", "rmd_lab", "rmd_appendices"]
 language:
   label:
     fig: "图 "

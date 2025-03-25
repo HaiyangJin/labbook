@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>第 9 章 面孔加工能力测试 | Face lab book</title>
+  <title>第 11 章 实验数据整理要求 | Face lab book</title>
   <meta name="description" content="This is the lab book of Face Lab." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="第 9 章 面孔加工能力测试 | Face lab book" />
+  <meta property="og:title" content="第 11 章 实验数据整理要求 | Face lab book" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is the lab book of Face Lab." />
   <meta name="github-repo" content="haiyangjin/lab-book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="第 9 章 面孔加工能力测试 | Face lab book" />
+  <meta name="twitter:title" content="第 11 章 实验数据整理要求 | Face lab book" />
   
   <meta name="twitter:description" content="This is the lab book of Face Lab." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="materials.html"/>
-<link rel="next" href="opendata.html"/>
+<link rel="prev" href="opendata.html"/>
+<link rel="next" href="contribute.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -290,114 +290,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="facetest" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">第 9 章</span> 面孔加工能力测试<a href="facetest.html#facetest" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>汇总：郭沫然<br />
-更新于：2024-12-16</p>
-<div id="格拉斯哥面孔匹配测试" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> 格拉斯哥面孔匹配测试<a href="facetest.html#格拉斯哥面孔匹配测试" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>格拉斯哥面孔匹配测试（Glasgow Face Matching Test, GFMT）</p>
-<ol style="list-style-type: decimal">
-<li>GFMT (Long) 包括168对面孔每个张面孔为全脸图像、中性表情。</li>
-<li>所有的图像均在同一背景拍摄，距离为90厘米。<br />
-</li>
-<li>两张图像的拍摄间隔大约为15分钟每个身份面孔，分别使用相机(相机1:富士FinePix0800Zoom, 600万像素)拍摄的全脸图像；摄像机(相机2:松下NV-DS29B DS29)拍摄的相同姿势并取其中一帧图像。<br />
-</li>
-<li>所有的图像沿头部周围整齐裁剪，删除背景和衣服，大小调整为350像素宽，以72 ppi的分辨率灰度存储。<br />
-</li>
-<li>测试构建成对的刺激时，两面孔图像中鼻梁间水平距离为500像素有一半是同脸试次，同一人的两张图像并排呈现，这84身份面孔也被用于不同面孔的试次，与数据库中一张相似面孔匹配呈现。<br />
-</li>
-<li>GFMT (Short) 只包含40对面孔这个测试的项目从完整版本中最难的项目选取选出了导致错误最多的20对匹配项目和20对不匹配项目</li>
-</ol>
-<p><img src="img/abilitytest/GFMT.png" style="zoom:100%;"/></p>
+<div id="dataarchive" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">第 11 章</span> 实验数据整理要求<a href="dataarchive.html#dataarchive" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="准备资料" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> 准备资料<a href="dataarchive.html#准备资料" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="创立主文件夹" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> 创立主文件夹<a href="dataarchive.html#创立主文件夹" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>总文件夹命名格式为”日期_实验名”，如：</p>
+<ul>
+<li>20250225_面孔整体加工实验02</li>
+<li>20250325_ORE</li>
+</ul>
 </div>
-<div id="格拉斯哥面孔匹配测试2" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> 格拉斯哥面孔匹配测试2<a href="facetest.html#格拉斯哥面孔匹配测试2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>格拉斯哥面孔匹配测试2（Glasgow Face Matching Test 2, GFMT2）</p>
-<ol style="list-style-type: decimal">
-<li>GFMT2使用与GFMT相同的图像来源-格拉斯哥不熟悉面孔数据库(Glasgow Unfamiliar Face Database, GUFD)构建。<br />
-</li>
-<li>所有匹配和不匹配的配对都不同于GFMT中使用的配对。<br />
-</li>
-<li>对每一个原始面孔身份分别创建三种不同变化材料：使用单反相机捕获头部角度刚性变化的静态图像；使用摄像机记录被试在说话和做出手势时面部运动的非刚性变化；从视频记录中采样包含姿势和头部角度轻微变化的图像，被试距离相机2米（原90厘米），从而引入相机到被试的距离变化分别对每一个变化图像进行配对。<br />
-</li>
-<li>GFMT2简短版本(GFMT2-S)不包含重复的面部身份，只包含三种变化中的一种配对，包括两个难度相同的40项测试表格, GFMT2-sa和GFMT2-sb，共80项。<br />
-</li>
-<li>使用彩色图像。</li>
-</ol>
-<p><img src="img/abilitytest/GFMT2.png" style="zoom:100%;"/></p>
+<div id="主文件夹包含四个子文件夹" class="section level3 hasAnchor" number="11.1.2">
+<h3><span class="header-section-number">11.1.2</span> 主文件夹包含四个子文件夹<a href="dataarchive.html#主文件夹包含四个子文件夹" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<thead>
+<tr class="header">
+<th align="center">文件夹名称</th>
+<th align="left">内容说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">被试信息</td>
+<td align="left">存放被试信息登记表，需扫描为PDF或JPEG格式</td>
+</tr>
+<tr class="even">
+<td align="center">实验程序</td>
+<td align="left">包含程序和实验材料</td>
+</tr>
+<tr class="odd">
+<td align="center">实验方案</td>
+<td align="left">Word格式文档</td>
+</tr>
+<tr class="even">
+<td align="center">实验数据</td>
+<td align="left">所有被试的数据</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="肯特面孔匹配测试" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> 肯特面孔匹配测试<a href="facetest.html#肯特面孔匹配测试" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>肯特面孔匹配测试（Kent Face Matching Test, KFMT）</p>
-<ol style="list-style-type: decimal">
-<li>使用材料来自肯特大学面孔数据库（Kent University Face Database, KUFD）。<br />
-</li>
-<li>在实验室拍摄的面孔照片，中性表情（用摄像机记录下被试旋转头部向不同方向看的过程）。<br />
-</li>
-<li>相应被试的ID照片ID照片不受表情、姿势或图像捕捉设备的限制，为变异性的重要来源ID照片在实验室照片拍摄前至少三个月获得实验室照片和ID照片之间的平均时间间隔约为8.8个月。<br />
-</li>
-<li>KFMT(Short) 由来自KUFD的40对高加索身份面孔对(20对男20对女)组成每对面孔由一张实验室照片和一张ID照片组成这些实验室照片被裁剪成只包含头部和肩部，缩放为283x332像素的大小，分辨率为72ppi，并被放置在白色背景右侧ID照片的尺寸为142x192像素，分辨率为72ppi，放置在背景的左侧。<br />
-</li>
-<li>在KFMT的简短版本的40对图像中，20对为相同的身份；20对不同的身份，根据头发颜色、面部和眉毛形状方面的视觉相似性进行配对</li>
-</ol>
-<p><img src="img/abilitytest/KFMT.png" style="zoom=100%;"/></p>
 </div>
-<div id="伦敦面孔匹配测试" class="section level2 hasAnchor" number="9.4">
-<h2><span class="header-section-number">9.4</span> 伦敦面孔匹配测试<a href="facetest.html#伦敦面孔匹配测试" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>模特面孔匹配测试（Models Face Matching Test, MFMT）</p>
+<div id="提交资料" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> 提交资料<a href="dataarchive.html#提交资料" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>135名男性模特的180张全彩图片，从一个专业模特作品集网站上获取。<br />
-</li>
-<li>图像均为正面面孔，被裁剪为只显示面部图像以300 × 420像素的大小以彩色呈现。<br />
-</li>
-<li>180张全彩图像被分为45个匹配试验和45个不匹配试验这些配对是通过6个人根据感知到的相似性将384张男性模特的面部图像分类成堆来预先确定的。<br />
-</li>
-<li>从所有试次中选出90个最困难的试验，并将它们分成三个独立但相同难度的部分，每个部分包含15个匹配和15个不匹配的试验。<br />
-</li>
-<li>对于MFMT (Long)，每名被试完成所有三个部分每个部分使用的刺激是平衡的，即整个实验中，每个面孔对在三个区块中出现的频率相同</li>
+<li>将整个文件夹打包发给报销人（通常为研二同学）</li>
+<li>同时上交纸质版：
+<ul>
+<li>被试信息登记表（<strong>需有老师签字</strong>）</li>
+</ul></li>
 </ol>
-</div>
-<div id="牛津面孔匹配测试" class="section level2 hasAnchor" number="9.5">
-<h2><span class="header-section-number">9.5</span> 牛津面孔匹配测试<a href="facetest.html#牛津面孔匹配测试" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>牛津面孔匹配测试（Oxford Face Matching Test, OFMT）</p>
-<ol style="list-style-type: decimal">
-<li>从多个公开数据库中选取成对的面孔刺激所有的数据库都包含面孔对是同一个人还是不同人的信息。<br />
-</li>
-<li>面孔均为自然状态，年龄和性别各异，白种人，正面面孔，有头发，没有背景戴眼镜的照片被排除在外。<br />
-</li>
-<li>图片被裁剪成3:4的比例，确保刺激大部分面积为面孔这些图像通过人脸识别算法进行相似性评估匹配，并以灰度图像呈现给被试。<br />
-</li>
-<li>对于OFMT (Long)，成对面孔刺激在1600毫秒内并排呈现，被试在1(非常不相似)到100(非常相似)的范围内判断这些面孔的相似性，以及明确判断面孔图像是否来自同一个人所有刺激使用标准呈现时间(不是根据被试的反应进行测试)。<br />
-</li>
-<li>用十对刺激作为注意力检测试次，用完全相同的面孔图像构建了五组相同的配对，同时用不同性别的面孔图像构建了五组不同的配对（针对人类被试）</li>
-</ol>
-<p><img src="img/abilitytest/OFMT.png" style="zoom:100%;"/></p>
-</div>
-<div id="专家化面孔匹配测试" class="section level2 hasAnchor" number="9.6">
-<h2><span class="header-section-number">9.6</span> 专家化面孔匹配测试<a href="facetest.html#专家化面孔匹配测试" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>专家化面孔匹配测试（Expertise in Facial Comparison Test, EFCT）</p>
-<ol style="list-style-type: decimal">
-<li>该测试材料来自不同环境条件下的自然面孔图像的面孔图像数据集该数据集专门用于在具有挑战性的条件下测试面孔识别算法，或针对具有面孔识别相关专业知识和经验的人群（例如：法医）。<br />
-</li>
-<li>面孔均为正面图像，所有面孔图像在对照明、表情和外观等因素控制最小的情况下拍摄。<br />
-3.根据人脸识别算法将面孔图像对依据匹配得分分为三个子集：“好”，“中等”，“差”， EFCT只包含来自“中等”和“差”两个部分的图像对。<br />
-</li>
-<li>被试在拍摄时间不同的两种条件下完成直立和倒立图像对的EFCT（人类被试）。<br />
-</li>
-<li>回答问题选项: (Ⅰ) 确定他们是同一个人; (Ⅱ) 认为他们是同一个人; (Ⅲ) 不知道; (Ⅳ) 认为他们是不同的人; (Ⅴ) 肯定他们是不同的人。 6. 总的来说，EFCT由168对图像组成 (一半相同，一半不同)，其中一半分配给直立测试，一半分配给倒立测试</li>
-</ol>
-<p><img src="img/abilitytest/EFCT.png" style="zoom=100%;"/></p>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="materials.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="opendata.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="opendata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="contribute.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -428,7 +384,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/HaiyangJin/lab-book/edit/main/rmd_stimdata/82-facetests.Rmd",
+"link": "https://github.com/HaiyangJin/lab-book/edit/main/rmd_lab/91_archive.Rmd",
 "text": "编辑"
 },
 "history": {

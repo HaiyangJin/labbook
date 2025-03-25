@@ -160,6 +160,11 @@ opendata
 磁共振fmri
 脑电eeg
 行为
+dataarchive
+准备资料
+创立主文件夹
+主文件夹包含四个子文件夹
+提交资料
 contribute
 直接pull-request
 简易教程

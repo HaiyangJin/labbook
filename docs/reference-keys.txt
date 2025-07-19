@@ -106,7 +106,7 @@ r-prepro
 r-rm-anova
 r-plot
 RStudioShortcutKeys
-报告统计值
+reportstats
 pvalue
 基本格式要求
 特殊情况处理

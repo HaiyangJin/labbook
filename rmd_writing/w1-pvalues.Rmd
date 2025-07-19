@@ -1,7 +1,7 @@
 
 # (PART) 学术写作 {-}
 
-# 报告统计值
+# 报告统计值 {#reportstats}
 
 ## *p*值 {#pvalue}
 

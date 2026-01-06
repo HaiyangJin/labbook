@@ -111,6 +111,8 @@ pvalue
 基本格式要求
 特殊情况处理
 apa格式示例
+thesis
+thesisref
 zotero
 下载安装
 功能简介

@@ -247,8 +247,4 @@ knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_deepseek_4.pn
 ```{r zotero-plugins-deepseek-5, echo=FALSE, fig.cap='GPT插件设置3', out.width='100%', fig.align='center'}
 knitr::include_graphics(file.path("img", "zotero", "zotero_plugins_deepseek_5.png"))
 ```  
-  
-  
-  
-  
-  
+

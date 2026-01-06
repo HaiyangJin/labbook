@@ -1,7 +1,7 @@
 # 使用Zotero插入国标格式参考文献 {#zotero-cite-cn}
 
 汇总：肖雯瑄  
-更新于：2025-02-12
+更新于：2026-01-06
 
 ## 引用前的准备工作
 
@@ -50,7 +50,7 @@ knitr::include_graphics(file.path("img", "zotero-cite-cn", "plugins_Jasminum_set
 
   1.先将**国标格式**下载到本地
   
-  [点击下载国标格式](downloads/china-national-standard-gb.csl)
+  [点击下载国标格式](downloads/gb-t-7714-2015.zip)
   
   2.打开引用的设置界面：编辑-首选项-引用
   

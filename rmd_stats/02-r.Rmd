@@ -1,20 +1,183 @@
 # R语言 {#r}
 
-
 ## 预处理数据 {#r-prepro}
 
-汇总： 
-更新于：
+汇总：葛铠诚
+更新于：2026-04-28
 
+对于大多数行为实验而言，原始导出文件通常不能直接进入统计分析。一个常见的做法是先保留分析所需的关键变量，再统一条件编码、剔除无效试次，并根据后续分析需要整理成长格式（long data）或宽格式（wide data）的数据表。下面的代码示例使用通用变量名，读者可以根据自己的数据结构替换列名。
+
+```{r r-prepro-import, eval=FALSE}
+library(tidyverse)
+
+# 读取原始数据
+# 可根据实际情况改为 read_csv()、read.delim() 等函数
+df_raw <- read.table("data.txt", sep = "\t", header = TRUE)
+
+# 保留分析真正需要的变量，并统一编码
+df_clean <- df_raw %>%
+  transmute(
+    Subject = Subject,
+    Condition1 = tolower(Condition1),
+    Condition2 = tolower(Condition2),
+    ACC = ACC,
+    RT = RT
+  )
+```
+
+如果数据中包含练习试次、未作答试次或明显异常的反应时，通常需要在正式分析前先进行筛选。以下示例演示了如何剔除无反应试次和过快反应。
+
+```{r r-prepro-filter, eval=FALSE}
+df_clean <- df_clean %>%
+  filter(!is.na(RT), RT >= 200)
+```
+
+如果研究中需要处理离群值，可以在“被试 × 条件”内部进行筛选。不同研究对离群值的定义可能不同，下例仅展示一种常见思路。
+
+```{r r-prepro-outlier, eval=FALSE}
+df_clean <- df_clean %>%
+  group_by(Subject, Condition1, Condition2) %>%
+  mutate(is_outlier = abs(scale(RT)) > 3) %>%
+  ungroup() %>%
+  filter(!is_outlier)
+```
+
+完成试次层面的清理后，通常还需要汇总出后续分析使用的数据表。例如，可以分别计算准确率和正确反应时。
+
+```{r r-prepro-summary, eval=FALSE}
+df_acc <- df_clean %>%
+  group_by(Subject, Condition1, Condition2) %>%
+  summarize(
+    ACC_mean = mean(ACC, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+df_rt <- df_clean %>%
+  filter(ACC == 1) %>%
+  group_by(Subject, Condition1, Condition2) %>%
+  summarize(
+    RT_mean = mean(RT, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+如果后续分析需要将不同条件展开成不同列，也可以将 long data 转换为 wide data。
+
+```{r r-prepro-wide, eval=FALSE}
+df_wide <- df_rt %>%
+  pivot_wider(names_from = Condition2, values_from = RT_mean)
+```
+
+在实际工作中，预处理的目标不是“尽量保留所有原始信息”，而是生成结构清晰、规则透明、可直接进入后续分析的数据表。
 
 ## 重复测量方差分析 {#r-rm-anova}
 
-汇总： 
-更新于：
+汇总：葛铠诚
+更新于：2026-04-28
 
+重复测量方差分析适用于同一被试在多个条件下重复作答的设计。分析之前，建议先明确因变量是什么、实验中有哪些被试内因素，以及整理后的数据表是否已经达到“每一行对应一个被试在一个条件下的一个数值”这一要求。
+
+下面示例使用 `afex::aov_ez()` 进行重复测量方差分析，其中 `id` 为被试编号，`dv` 为因变量，`within` 为被试内因素。
+
+```{r r-rm-anova-basic, eval=FALSE}
+library(afex)
+library(emmeans)
+
+aov_res <- aov_ez(
+  id = "Subject",
+  dv = "RT_mean",
+  data = df_rt,
+  within = c("Condition1", "Condition2")
+)
+
+anova(aov_res, es = "pes")
+```
+
+如果同一项研究同时关注多个因变量，例如准确率和反应时，通常应分别建模，而不是混合解释。
+
+```{r r-rm-anova-multiple-dv, eval=FALSE}
+aov_acc <- aov_ez(
+  id = "Subject",
+  dv = "ACC_mean",
+  data = df_acc,
+  within = c("Condition1", "Condition2")
+)
+
+aov_rt <- aov_ez(
+  id = "Subject",
+  dv = "RT_mean",
+  data = df_rt,
+  within = c("Condition1", "Condition2")
+)
+```
+
+总体模型得到主效应和交互效应后，往往还需要结合边际均值、简单效应或事后比较来解释结果。
+
+```{r r-rm-anova-followup, eval=FALSE}
+# 边际均值
+emmeans(aov_res, ~ Condition1 * Condition2)
+
+# 在 Condition1 的每个水平下比较 Condition2
+contrast(emmeans(aov_res, ~ Condition2 | Condition1), "pairwise")
+
+# 在 Condition1 的每个水平下检验其他项
+joint_tests(aov_res, by = "Condition1")
+```
+
+在报告结果时，通常需要将统计检验与研究问题对应起来：主效应回答“某个因素整体是否有影响”，交互效应则帮助研究者理解“一个因素的作用是否依赖于另一个因素的水平”。
 
 ## 数据可视化 {#r-plot}
 
-汇总： 
-更新于：
+汇总：葛铠诚
+更新于：2026-04-28
 
+实验数据可视化通常不是直接将原始 trial 数据画出来，而是先根据研究问题整理出条件均值、标准误或置信区间，再使用 `ggplot2` 绘图。如果研究结果需要用于论文或正式汇报，可以在 `ggplot2` 绘图的基础上，结合 `papaja` 包中的 `theme_apa()` 设置 APA 风格主题。这样更有利于展示条件差异、交互模式和理论效应。
+
+下面示例演示如何先汇总条件均值与标准误，再绘制一个简单的 APA 风格条件均值图。
+
+```{r r-plot-summary, eval=FALSE}
+df_plot <- df_rt %>%
+  group_by(Condition1, Condition2) %>%
+  summarize(
+    mean_rt = mean(RT_mean, na.rm = TRUE),
+    se_rt = sd(RT_mean, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  )
+```
+
+```{r r-plot-basic, eval=FALSE}
+library(ggplot2)
+library(papaja)
+
+ggplot(df_plot, aes(x = Condition1, y = mean_rt,
+                    color = Condition2, group = Condition2)) +
+  geom_point(size = 2) +
+  geom_line() +
+  geom_errorbar(aes(ymin = mean_rt - se_rt, ymax = mean_rt + se_rt),
+                width = 0.1) +
+  labs(x = NULL, y = "RT (ms)", color = "Condition2") +
+  theme_apa()
+```
+
+如果研究关注的是某种效应分数随条件变化的趋势，也可以先汇总效应指标，再绘制趋势图。
+
+```{r r-plot-effect, eval=FALSE}
+df_effect <- df_rt %>%
+  group_by(Condition1) %>%
+  summarize(
+    mean_effect = mean(RT_mean, na.rm = TRUE),
+    se_effect = sd(RT_mean, na.rm = TRUE) / sqrt(n()),
+    .groups = "drop"
+  )
+
+ggplot(df_effect, aes(x = Condition1, y = mean_effect, group = 1)) +
+  geom_line() +
+  geom_point(size = 2) +
+  geom_errorbar(aes(ymin = mean_effect - se_effect,
+                    ymax = mean_effect + se_effect),
+                width = 0.1) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  theme_apa()
+```
+
+无论使用何种图形，都建议优先考虑标签是否清楚、误差线含义是否明确、不同条件是否容易区分，以及图形是否真正服务于研究问题。

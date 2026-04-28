@@ -8,7 +8,7 @@
 
 ## 直接Pull Request
 
-如果你已经可以非常熟练地使用 Git 和 GitHub，那么你可以直接在 GitHub 上提交issues或Pull Request。
+如果你已经可以非常熟练地使用 Git 和 GitHub，那么你可以直接在 [GitHub 项目页面](https://github.com/HaiyangJin/labbook) 提交 issues 或 Pull Request。
 
 ## 简易教程
 

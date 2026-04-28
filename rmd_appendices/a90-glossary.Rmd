@@ -3,7 +3,11 @@
 
 English | 中文
 -- | --
-face processing | 面孔加工（不能用“处理”）  
-above chance | 高于随机水平  
+face processing | 面孔加工（不能用“处理”）
+above chance | 高于随机水平
 construct | 构念
+congruent | 一致
+incongruent | 不一致
+align | 对齐
+misalign | 错位
 

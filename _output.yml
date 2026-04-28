@@ -7,7 +7,7 @@ bookdown::gitbook:
         <li><a href="./">Face Lab Book</a></li>
       after: |
         <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/HaiyangJin/lab-book/edit/main/%s
+    edit: https://github.com/HaiyangJin/labbook/edit/main/%s
     download: ["pdf", "epub"]
     sharing:
       github: yes
